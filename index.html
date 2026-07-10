@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi Sidang Skripsi | A. HAPENDI - SIMP Lazatto Stasiun Walantaka</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Dynamic Animated Aurora & Cyber Background -->
+  <div class="animated-bg-container" aria-hidden="true">
+    <div class="aurora-blob blob-red"></div>
+    <div class="aurora-blob blob-orange"></div>
+    <div class="aurora-blob blob-blue"></div>
+    <div class="aurora-blob blob-purple"></div>
+    <div class="cyber-grid-overlay"></div>
+    <!-- 10 Floating Moving Geometric & Tech Icons -->
+    <div class="floating-item float-icon-1"><i class="fa-solid fa-cube"></i></div>
+    <div class="floating-item float-icon-2"><i class="fa-solid fa-database"></i></div>
+    <div class="floating-item float-icon-3"><i class="fa-solid fa-chart-line"></i></div>
+    <div class="floating-item float-icon-4"><i class="fa-solid fa-microchip"></i></div>
+    <div class="floating-item float-icon-5"><i class="fa-solid fa-boxes-stacked"></i></div>
+    <div class="floating-item float-shape float-circle-1"></div>
+    <div class="floating-item float-shape float-circle-2"></div>
+    <div class="floating-item float-shape float-ring-1"></div>
+    <div class="floating-item float-shape float-ring-2"></div>
+    <div class="floating-item float-shape float-diamond"></div>
+    <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  </div>
+
+  <!-- EFEK BINTANG JATUH & KILAU BINTANG (BERADA DI LAPISAN DEPAN / LAYAR PENUH FULLSCREEN AGAR HIDUP) -->
+  <div class="shooting-stars-container" id="shootingStarsContainer">
+    <!-- Meteor Jatuh -->
+    <div class="shooting-star" style="--delay: 0s; --top: 8%; --left: 85%; --duration: 2.5s;"></div>
+    <div class="shooting-star" style="--delay: 1.2s; --top: 4%; --left: 60%; --duration: 3s;"></div>
+    <div class="shooting-star" style="--delay: 2.4s; --top: 18%; --left: 92%; --duration: 2.2s;"></div>
+    <div class="shooting-star" style="--delay: 3.6s; --top: 12%; --left: 70%; --duration: 2.8s;"></div>
+    <div class="shooting-star" style="--delay: 4.8s; --top: 25%; --left: 80%; --duration: 3.2s;"></div>
+    <div class="shooting-star" style="--delay: 6.0s; --top: 6%; --left: 45%; --duration: 2.6s;"></div>
+    <div class="shooting-star" style="--delay: 7.2s; --top: 20%; --left: 65%; --duration: 2.9s;"></div>
+    <div class="shooting-star" style="--delay: 8.5s; --top: 30%; --left: 95%; --duration: 2.4s;"></div>
+    <div class="shooting-star" style="--delay: 9.8s; --top: 15%; --left: 88%; --duration: 2.7s;"></div>
+
+    <!-- Bintang Berkelap-kelip (Twinkles) -->
+    <div class="twinkle-star" style="--top: 10%; --left: 15%; --size: 4px; --dur: 2.2s; --delay: 0.2s;"></div>
+    <div class="twinkle-star" style="--top: 18%; --left: 32%; --size: 3px; --dur: 3.1s; --delay: 1.0s;"></div>
+    <div class="twinkle-star" style="--top: 8%; --left: 55%; --size: 5px; --dur: 2.6s; --delay: 0.5s;"></div>
+    <div class="twinkle-star" style="--top: 22%; --left: 78%; --size: 3px; --dur: 3.5s; --delay: 1.8s;"></div>
+    <div class="twinkle-star" style="--top: 14%; --left: 89%; --size: 4px; --dur: 2.8s; --delay: 0.7s;"></div>
+    <div class="twinkle-star" style="--top: 82%; --left: 12%; --size: 4px; --dur: 3.2s; --delay: 1.2s;"></div>
+    <div class="twinkle-star" style="--top: 88%; --left: 48%; --size: 3px; --dur: 2.4s; --delay: 0.4s;"></div>
+    <div class="twinkle-star" style="--top: 75%; --left: 85%; --size: 5px; --dur: 3.0s; --delay: 1.5s;"></div>
+    <div class="twinkle-star" style="--top: 45%; --left: 92%; --size: 4px; --dur: 2.7s; --delay: 0.9s;"></div>
+    <div class="twinkle-star" style="--top: 52%; --left: 6%; --size: 3px; --dur: 3.4s; --delay: 2.1s;"></div>
+  </div>
+
+  <!-- Top Navigation / Header (Berlaku di Semua Slide) -->
+  <header class="presentation-topbar">
+    <div class="topbar-brand">
+      <div class="logo-protective-box">
+        <img src="logokampus.png" alt="Logo UNBAJA" class="topbar-logo-univ">
+      </div>
+      <div>
+        <div class="topbar-univ-heading">UNIVERSITAS BANTEN JAYA 2026</div>
+        <div class="topbar-title" style="display:flex; align-items:center; gap:8px;">
+          <span>A. HAPENDI (1101221160)</span>
+        </div>
+      </div>
+    </div>
+    <div class="topbar-center-brand">
+      <div class="logo-protective-box">
+        <img src="Logofilkom.png" alt="Fakultas Ilmu Komputer" class="topbar-logo-fakultas">
+      </div>
+    </div>
+    <div class="topbar-controls">
+      <button class="btn-icon btn-fullscreen" id="btnFullscreenToggle" title="Tampilkan Fullscreen Layar Penuh (F11)">
+        <i class="fa-solid fa-expand" id="iconFullscreen"></i> Layar Penuh
+      </button>
+      <button class="btn-icon" id="btnOverviewToggle" title="Daftar 12 Slide">
+        <i class="fa-solid fa-table-cells"></i> Daftar Slide
+      </button>
+      <button class="btn-icon" id="btnThemeToggle" title="Ganti Tema Gelap/Terang">
+        <i class="fa-solid fa-circle-half-stroke"></i> Tema
+      </button>
+    </div>
+  </header>
+
+  <!-- Slide Stage -->
+  <main class="stage-container">
+    <div class="slides-wrapper" id="slidesWrapper">
+
+      <!-- SLIDE 1: COVER / JUDUL SKRIPSI (MATCH DESAIN UNBAJA) -->
+      <section class="slide active cover-slide" data-slide="1">
+        <!-- Kop Header Kampus -->
+        <div class="cover-header-bar">
+          <div class="header-univ">
+            <div class="logo-protective-box">
+              <img src="logokampus.png" alt="Logo UNBAJA" class="univ-logo-img">
+            </div>
+            <span><strong>UNIVERSITAS BANTEN JAYA</strong> 2026</span>
+          </div>
+          <div class="header-fakultas">
+            <div class="logo-protective-box">
+              <img src="Logofilkom.png" alt="Fakultas Ilmu Komputer" class="fikom-logo-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="cover-content-grid">
+          <!-- Kolom Kiri: Judul Skripsi & Identitas -->
+          <div class="cover-left">
+            <h1 class="cover-title-main">
+              <span class="title-teal">PERANCANGAN SISTEM INFORMASI MANAJEMEN PERSEDIAAN</span><br>
+              <span class="title-gold">UNTUK MENGOPTIMALKAN STOK BAHAN BAKU PADA LAZATTO STASIUN WALANTAKA</span>
+            </h1>
+
+            <div class="cover-identity-card">
+              <div class="identity-col">
+                <div class="identity-label">Disusun oleh :</div>
+                <div class="identity-name">Ahmad Hapendi</div>
+                <div class="identity-npm">1101221160</div>
+              </div>
+              <div class="identity-divider"></div>
+              <div class="identity-col">
+                <div class="identity-label">Dosen Pembimbing :</div>
+                <div class="identity-lecturer">Edy Rakhmat, M.Kom. (1)</div>
+                <div class="identity-lecturer">Andi Usri Usman, S.Kom., M.Kom. (2)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Bingkai Dokumentasi / Foto Restoran Lazatto -->
+          <div class="cover-right">
+            <div class="photo-collage-frame">
+              <div class="collage-grid">
+                <!-- Photo Card 1: ayam.jpeg -->
+                <div class="collage-item" title="Stok Ayam Freezer Lazatto">
+                  <img src="ayam.jpeg" alt="Stok Ayam Freezer Lazatto" class="collage-photo">
+                </div>
+                <!-- Photo Card 2: observasi1.jpeg -->
+                <div class="collage-item" title="Observasi Dapur & Operasional">
+                  <img src="observasi1.jpeg" alt="Observasi Dapur" class="collage-photo">
+                </div>
+                <!-- Photo Card 3: observasi2.jpeg -->
+                <div class="collage-item" title="Pengecekan Stok Bahan Baku">
+                  <img src="observasi2.jpeg" alt="Pengecekan Stok" class="collage-photo">
+                </div>
+                <!-- Photo Card 4: observasi3.jpeg -->
+                <div class="collage-item" title="Suasana Pelayanan Konsumen">
+                  <img src="observasi3.jpeg" alt="Pelayanan Konsumen" class="collage-photo">
+                </div>
+              </div>
+              <!-- Badge Logo Lazatto (Asli logo.png) -->
+              <div class="collage-badge-img">
+                <img src="logo.png" alt="Logo Lazatto Chicken & Burger">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: LATAR BELAKANG & IDENTIFIKASI MASALAH -->
+      <section class="slide" data-slide="2">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab I • Pendahuluan</div>
+            <h2 class="slide-title">Latar Belakang & Identifikasi Masalah</h2>
+          </div>
+          <span class="slide-number-badge">Slide 2 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-red">
+            <div class="card-title"><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent-red)"></i>
+              Kondisi & Permasalahan Aktual</div>
+            <p class="card-text">
+              Lazatto Stasiun Walantaka adalah usaha kuliner cepat saji dengan tingkat perputaran bahan baku tinggi.
+              Dalam operasionalnya, ditemukan 3 hambatan utama:
+            </p>
+            <ul class="clean-list">
+              <li><strong>Pencatatan Konvensional:</strong> Masih mengandalkan buku catatan fisik & kertas terpisah,
+                rentan kesalahan catat (<em>human error</em>) dan selisih data gudang.</li>
+              <li><strong>Ketidakseimbangan Stok:</strong> Sering terjadi kondisi <em>Overstock</em> (bahan
+                menumpuk/kadaluwarsa) maupun <em>Understock</em> (kehabisan bahan di tengah produksi).</li>
+              <li><strong>Ketiadaan Peringatan Dini:</strong> Tidak ada sistem otomatis yang mengingatkan saat stok
+                kritis sebelum kehabisan total.</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-bullseye" style="color: var(--accent-orange)"></i> Urgensi
+              Solusi Sistem Informasi</div>
+            <p class="card-text">
+              Untuk mengatasi permasalahan tersebut, dibutuhkan transformasi digital dari pencatatan konvensional menuju
+              sistem terintegrasi:
+            </p>
+            <ul class="clean-list">
+              <li><strong>Pencatatan Terpusat & Real-Time:</strong> Mengintegrasikan arus barang masuk, keluar, dan sisa
+                fisik dalam satu basis data.</li>
+              <li><strong>Penerapan Metode Min-Max:</strong> Menetapkan batas pengaman (<em>Safety Stock / Reorder
+                  Point</em>) dan batas maksimum untuk efisiensi modal persediaan.</li>
+              <li><strong>Laporan Eksekutif Presisi:</strong> Memudahkan Pimpinan (Owner) memantau evaluasi stok dan
+                riwayat audit secara transparan.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: RUMUSAN MASALAH, TUJUAN & BATASAN -->
+      <section class="slide" data-slide="3">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab I • Pendahuluan</div>
+            <h2 class="slide-title">Rumusan Masalah, Tujuan & Batasan Penelitian</h2>
+          </div>
+          <span class="slide-number-badge">Slide 3 / 15</span>
+        </div>
+        <div class="slide-body grid-3">
+          <div class="info-card highlight-blue">
+            <div class="card-title"><i class="fa-solid fa-circle-question" style="color: var(--accent-blue)"></i>
+              Rumusan Masalah</div>
+            <ul class="clean-list">
+              <li>Bagaimana merancang sistem informasi persediaan bahan baku yang terstruktur dan terintegrasi basis
+                data?</li>
+              <li>Bagaimana menerapkan metode <strong>Min-Max</strong> untuk mencegah kelebihan dan kekurangan stok?
+              </li>
+              <li>Bagaimana menyajikan laporan persediaan akurat & tepat waktu untuk pengendalian stok?</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-flag-checkered" style="color: var(--accent-emerald)"></i>
+              Tujuan Penelitian</div>
+            <ul class="clean-list">
+              <li>Merancang & membangun aplikasi SIMP berbasis web pada Lazatto Stasiun Walantaka.</li>
+              <li>Menerapkan algoritma <strong>Min-Max</strong> beserta fitur <em>Early Warning System</em> untuk
+                kendali stok otomatis.</li>
+              <li>Menghasilkan sistem laporan dan rekapitulasi transaksi real-time yang dapat diekspor (PDF).</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-sliders" style="color: var(--accent-orange)"></i> Batasan
+              Penelitian</div>
+            <ul class="clean-list">
+              <li>Fokus pada pengelolaan bahan baku operasional Lazatto Stasiun Walantaka (tanpa modul kasir penjualan).
+              </li>
+              <li>Mencakup master bahan baku, barang masuk, barang keluar/pemakaian, dan laporan stok.</li>
+              <li>Pengembangan berbasis <strong>Laravel (PHP)</strong> dan basis data <strong>MySQL</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: LANDASAN TEORI & METODE MIN-MAX -->
+      <section class="slide" data-slide="4">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab II • Landasan Teori</div>
+            <h2 class="slide-title">Metode Pengendalian Persediaan (Min-Max Inventory)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 4 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-calculator" style="color: var(--accent-orange)"></i> Konsep &
+              Parameter Metode Min-Max</div>
+            <p class="card-text">
+              Metode <em>Min-Max</em> mengendalikan stok berdasarkan dua batas kritis yang ditentukan untuk setiap item
+              bahan baku:
+            </p>
+            <ul class="clean-list">
+              <li><strong>Batas Minimum (Min / Safety Stock):</strong> Titik pemicu pemesanan kembali (<em>Reorder
+                  Point</em>). Jika stok $\le$ Min, sistem memberi peringatan <strong>KRITIS / RE-ORDER</strong>.</li>
+              <li><strong>Batas Maksimum (Max):</strong> Batas kuantitas simpan atas agar gudang tidak mengalami
+                kelebihan stok (<em>Overstock</em>).</li>
+              <li><strong>Zona Aman:</strong> Kondisi stok berada di antara batas minimum dan maksimum (Min &lt; Stok
+                $\le$ Max).</li>
+            </ul>
+          </div>
+          <div class="simulator-box">
+            <div class="card-title"><i class="fa-solid fa-gamepad" style="color: var(--accent-blue)"></i> Simulasi
+              Interaktif Logika Min-Max</div>
+            <div class="sim-controls">
+              <div class="sim-input-group">
+                <label>Stok Aktual (Kg): <span id="valActual">25</span></label>
+                <input type="range" id="simActual" min="0" max="80" value="25">
+              </div>
+              <div class="sim-input-group">
+                <label>Batas Min: <span id="valMin">30</span></label>
+                <input type="range" id="simMin" min="5" max="40" value="30">
+              </div>
+              <div class="sim-input-group">
+                <label>Batas Max: <span id="valMax">60</span></label>
+                <input type="range" id="simMax" min="40" max="100" value="60">
+              </div>
+            </div>
+            <div class="sim-gauge">
+              <div class="sim-bar" id="simBar" style="width: 41.6%; background-color: var(--accent-red);">25 Kg</div>
+            </div>
+            <div class="sim-status-banner" id="simStatus"
+              style="background: rgba(225, 37, 27, 0.2); color: #e1251b; border: 1px solid rgba(225,37,27,0.4);">
+              <span>STATUS STOK: KRITIS (RE-ORDER SEGERA)</span>
+              <span class="badge badge-danger">Stok ≤ Batas Min</span>
+            </div>
+            <div class="sim-presets">
+              <span class="sim-preset-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Skenario Cepat:</span>
+              <button class="btn-preset btn-preset-danger" id="presetKritis" type="button"><i
+                  class="fa-solid fa-triangle-exclamation"></i> Uji Stok Kritis</button>
+              <button class="btn-preset btn-preset-success" id="presetAman" type="button"><i
+                  class="fa-solid fa-circle-check"></i> Uji Zona Aman</button>
+              <button class="btn-preset btn-preset-warning" id="presetOver" type="button"><i
+                  class="fa-solid fa-boxes-stacked"></i> Uji Overstock</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: METODOLOGI PENELITIAN (SDLC WATERFALL) -->
+      <section class="slide" data-slide="5">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab III • Metodologi Penelitian</div>
+            <h2 class="slide-title">Metodologi Pengembangan Sistem (SDLC Waterfall)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 5 / 15</span>
+        </div>
+        <div class="slide-body">
+          <div class="grid-4">
+            <div class="info-card highlight-blue">
+              <div class="card-title"><span class="badge badge-info">1</span> Requirement</div>
+              <p class="card-text">
+                Pengumpulan data melalui observasi langsung di restoran, wawancara dengan Owner (Ibu Sunaimah S.E), dan
+                studi literatur pengendalian persediaan.
+              </p>
+            </div>
+            <div class="info-card highlight-emerald">
+              <div class="card-title"><span class="badge badge-success">2</span> Design</div>
+              <p class="card-text">
+                Perancangan sistem berorientasi objek dengan <strong>UML</strong> (Use Case, Activity, Sequence, Class
+                Diagram) serta pemodelan ERD dan UI/UX.
+              </p>
+            </div>
+            <div class="info-card highlight-orange">
+              <div class="card-title"><span class="badge badge-warning">3</span> Implementation</div>
+              <p class="card-text">
+                Pengkodean sistem menggunakan framework <strong>Laravel (PHP)</strong>, database <strong>MySQL</strong>,
+                dan editor Visual Studio Code.
+              </p>
+            </div>
+            <div class="info-card highlight-red">
+              <div class="card-title"><span class="badge badge-danger">4</span> Verification</div>
+              <p class="card-text">
+                Pengujian validasi fungsional menyeluruh dengan metode <strong>Black Box Testing</strong> untuk menjamin
+                akurasi 100% skenario.
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="card-title"><i class="fa-solid fa-arrows-spin" style="color: var(--accent-blue)"></i> Alur
+              Siklus Pemecahan Masalah</div>
+            <p class="card-text">
+              Penerapan model <em>Waterfall</em> memberikan pendekatan terstruktur dari analisis kebutuhan hingga
+              implementasi nyata, memastikan peralihan dari sistem pencatatan kertas ke sistem informasi web berjalan
+              mulus tanpa mengganggu operasional dapur Lazatto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: ARSITEKTUR & PERAN AKTOR (UML) -->
+      <section class="slide" data-slide="6">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Sistem</div>
+            <h2 class="slide-title">Arsitektur Pengguna & Pembagian Peran Aktor (Use Case)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 6 / 15</span>
+        </div>
+        <div class="slide-body grid-3">
+          <div class="actor-card" style="border-top: 4px solid var(--accent-emerald);">
+            <div class="actor-header">
+              <div class="actor-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                <i class="fa-solid fa-user-gear"></i>
+              </div>
+              <div>
+                <div class="actor-role">Staff Operasional</div>
+                <div class="actor-desc">Staf Dapur & Gudang</div>
+              </div>
+            </div>
+            <ul class="clean-list">
+              <li>Input transaksi <strong>Bahan Baku Masuk</strong> saat penerimaan pasokan.</li>
+              <li>Input transaksi <strong>Bahan Baku Keluar</strong> untuk pemakaian dapur / rusak.</li>
+              <li>Melihat riwayat transaksi dan status stok terkini di lapangan.</li>
+            </ul>
+          </div>
+
+          <div class="actor-card" style="border-top: 4px solid var(--accent-blue);">
+            <div class="actor-header">
+              <div class="actor-icon" style="background: rgba(59, 130, 246, 0.15); color: var(--accent-blue);">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <div>
+                <div class="actor-role">Admin Sistem</div>
+                <div class="actor-desc">Kepala Restoran / Pengelola</div>
+              </div>
+            </div>
+            <ul class="clean-list">
+              <li>Akses penuh kelola <strong>Master Data Bahan Baku</strong> & parameter Min-Max.</li>
+              <li>Manajemen akun pengguna (<strong>Kelola User</strong> & Role Access).</li>
+              <li><strong>Koreksi / Rekonsiliasi</strong> transaksi (Edit & Hapus) serta unduh Laporan PDF.</li>
+            </ul>
+          </div>
+
+          <div class="actor-card" style="border-top: 4px solid var(--accent-orange);">
+            <div class="actor-header">
+              <div class="actor-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-orange);">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <div>
+                <div class="actor-role">Owner / Pimpinan</div>
+                <div class="actor-desc">Pemilik Restoran</div>
+              </div>
+            </div>
+            <ul class="clean-list">
+              <li>Monitoring eksekutif real-time melalui <strong>Dashboard Pimpinan</strong>.</li>
+              <li>Memantau grafik evaluasi pergerakan bahan & status stok kritis.</li>
+              <li>Mengunduh dan mencetak <strong>Laporan Persediaan PDF</strong> untuk instruksi restock.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: RANCANGAN UML 1 - USE CASE DIAGRAM -->
+      <section class="slide" data-slide="7">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Sistem (UML 1)</div>
+            <h2 class="slide-title">Perancangan Use Case Diagram & Interaksi Aktor</h2>
+          </div>
+          <span class="slide-number-badge">Slide 7 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <!-- Kiri: Diagram Visual Use Case -->
+          <div class="info-card highlight-blue"
+            style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div class="card-title"><i class="fa-solid fa-project-diagram" style="color: var(--accent-blue)"></i>
+              Struktur Use Case SIMP Lazatto</div>
+            <div
+              style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 16px; margin: 8px 0;">
+              <div style="display:flex; justify-content:space-around; align-items:center; gap:12px;">
+                <!-- Aktor Kolom Kiri -->
+                <div style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+                  <div class="badge badge-info" style="font-size:0.75rem;"><i class="fa-solid fa-user-gear"></i> Staff
+                    Operasional</div>
+                  <div class="badge badge-warning" style="font-size:0.75rem;"><i class="fa-solid fa-user-shield"></i>
+                    Admin Sistem</div>
+                  <div class="badge badge-success" style="font-size:0.75rem;"><i class="fa-solid fa-user-tie"></i> Owner
+                    Restoran</div>
+                </div>
+                <!-- Garis Koneksi -->
+                <div style="font-size:1.4rem; color:var(--accent-blue);"><i class="fa-solid fa-arrows-left-right"></i>
+                </div>
+                <!-- Use Case Bubbles -->
+                <div style="display:flex; flex-direction:column; gap:8px; width:60%;">
+                  <div
+                    style="background:rgba(56,189,248,0.15); border:1px solid var(--accent-blue); padding:6px 10px; border-radius:99px; font-size:0.75rem; text-align:center;">
+                    1. Kelola Master Bahan & Batas Min-Max</div>
+                  <div
+                    style="background:rgba(16,185,129,0.15); border:1px solid var(--accent-emerald); padding:6px 10px; border-radius:99px; font-size:0.75rem; text-align:center;">
+                    2. Transaksi Masuk & Keluar (Mutasi Stok)</div>
+                  <div
+                    style="background:rgba(245,158,11,0.15); border:1px solid var(--accent-orange); padding:6px 10px; border-radius:99px; font-size:0.75rem; text-align:center;">
+                    3. Monitoring Grafik Stok & Alert Kritis</div>
+                  <div
+                    style="background:rgba(225,37,27,0.15); border:1px solid var(--accent-red); padding:6px 10px; border-radius:99px; font-size:0.75rem; text-align:center;">
+                    4. Cetak & Unduh Laporan Persediaan PDF</div>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.5;">
+              <i class="fa-solid fa-circle-info" style="color:var(--accent-blue)"></i> <strong>Batas Sistem (System
+                Boundary):</strong> Seluruh fungsionalitas diamankan dengan mekanisme autentikasi dan otorisasi berbasis
+              peran (<em>Role-Based Access Control</em>).
+            </div>
+          </div>
+
+          <!-- Kanan: Matriks Relasi Use Case -->
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-list-check" style="color: var(--accent-emerald)"></i> Relasi &
+              Spesifikasi Use Case</div>
+            <table class="data-table" style="font-size:0.8rem;">
+              <thead>
+                <tr>
+                  <th>Kode UC</th>
+                  <th>Nama Use Case</th>
+                  <th>Aktor Utama</th>
+                  <th>Relasi & Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>UC-01</strong></td>
+                  <td>Login & Autentikasi</td>
+                  <td>Semua Aktor</td>
+                  <td><code>&lt;&lt;include&gt;&gt;</code> wajib untuk semua akses</td>
+                </tr>
+                <tr>
+                  <td><strong>UC-02</strong></td>
+                  <td>Kelola Master Bahan</td>
+                  <td>Admin Sistem</td>
+                  <td>Set parameter Min, Max, dan SKU tunggal</td>
+                </tr>
+                <tr>
+                  <td><strong>UC-03</strong></td>
+                  <td>Input Mutasi Stok</td>
+                  <td>Staff & Admin</td>
+                  <td>Otomatis perbaharui akumulasi stok</td>
+                </tr>
+                <tr>
+                  <td><strong>UC-04</strong></td>
+                  <td>Notifikasi Min-Max</td>
+                  <td>Sistem (Otomatis)</td>
+                  <td><code>&lt;&lt;extend&gt;&gt;</code> dipicu saat stok &le; batas Min</td>
+                </tr>
+                <tr>
+                  <td><strong>UC-05</strong></td>
+                  <td>Laporan Eksekutif</td>
+                  <td>Owner & Admin</td>
+                  <td>Ekspor rekapitulasi ke format PDF resmi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: RANCANGAN UML 2 - ACTIVITY DIAGRAM -->
+      <section class="slide" data-slide="8">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Sistem (UML 2)</div>
+            <h2 class="slide-title">Activity Diagram Alur Transaksi & Evaluasi Stok Min-Max</h2>
+          </div>
+          <span class="slide-number-badge">Slide 8 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <!-- Kiri: Alur Activity Diagram -->
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-diagram-next" style="color: var(--accent-orange)"></i>
+              Flowchart Activity Transaksi Barang Masuk & Keluar</div>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
+              <div
+                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-blue); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
+                <strong>1. Mulai & Pilih Menu:</strong> Aktor memilih jenis transaksi (Barang Masuk atau Barang Keluar)
+                dan memilih SKU bahan baku.
+              </div>
+              <div
+                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-emerald); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
+                <strong>2. Validasi Ketersediaan (Decision):</strong> Jika Transaksi Keluar, sistem mengecek apakah
+                <code>Qty Keluar &le; Stok Aktual</code>. Jika tidak cukup, sistem menolak transaksi.
+              </div>
+              <div
+                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-orange); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
+                <strong>3. Pembaruan Akumulasi Stok:</strong> Sistem menyimpan catatan mutasi dan memperbarui kolom
+                <code>current_stock</code> pada tabel utama <code>materials</code>.
+              </div>
+              <div
+                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-red); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
+                <strong>4. Evaluasi Batas Min-Max (Decision):</strong> Jika <code>Stok Akhir &le; min_stock</code>,
+                sistem mengaktifkan status <strong>KRITIS</strong> dan memunculkan peringatan Re-order.
+              </div>
+            </div>
+          </div>
+
+          <!-- Kanan: Visual Swimlane Aktor vs Sistem -->
+          <div class="info-card highlight-blue">
+            <div class="card-title"><i class="fa-solid fa-water" style="color: var(--accent-blue)"></i> Pembagian Jalur
+              Aktivitas (Swimlane)</div>
+            <table class="data-table" style="font-size:0.8rem;">
+              <thead>
+                <tr>
+                  <th>Jalur Aktor (User)</th>
+                  <th>Jalur Sistem SIMP Lazatto</th>
+                  <th>Jalur Database MySQL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Input formulir mutasi stok bahan baku</td>
+                  <td>Memeriksa kelengkapan & validitas form</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Konfirmasi simpan transaksi</td>
+                  <td>Menghitung stok baru (<code>+</code> atau <code>-</code>)</td>
+                  <td><code>BEGIN TRANSACTION</code></td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>Mengevaluasi parameter Min-Max</td>
+                  <td><code>UPDATE materials</code> & <code>INSERT mutations</code></td>
+                </tr>
+                <tr>
+                  <td>Menerima notifikasi status & resi</td>
+                  <td>Menampilkan pembaruan grafik real-time</td>
+                  <td><code>COMMIT TRANSACTION</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: RANCANGAN UML 3 - SEQUENCE & CLASS DIAGRAM -->
+      <section class="slide" data-slide="9">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Sistem (UML 3)</div>
+            <h2 class="slide-title">Sequence Diagram & Class Diagram Arsitektur SIMP</h2>
+          </div>
+          <span class="slide-number-badge">Slide 9 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <!-- Kiri: Sequence Diagram MVC -->
+          <div class="info-card highlight-blue">
+            <div class="card-title"><i class="fa-solid fa-code-compare" style="color: var(--accent-blue)"></i> Sequence
+              Diagram MVC (Model-View-Controller)</div>
+            <p class="card-text">Interaksi antar objek dalam siklus penambahan mutasi persediaan:</p>
+            <div
+              style="background: rgba(0,0,0,0.3); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:12px; font-family:'JetBrains Mono', monospace; font-size:0.75rem; line-height:1.7;">
+              <div>[Aktor] --1. Input Mutasi--&gt; [StockView]</div>
+              <div>[StockView] --2. Request POST--&gt; [StockController]</div>
+              <div>[StockController] --3. Validate & Check--&gt; [MaterialModel]</div>
+              <div>[MaterialModel] --4. Execute SQL Query--&gt; [MySQL DB]</div>
+              <div>[MySQL DB] --5. Return Success--&gt; [MaterialModel]</div>
+              <div>[StockController] --6. Evaluate Min-Max--&gt; [AlertService]</div>
+              <div>[StockController] --7. Render Updated UI--&gt; [StockView]</div>
+            </div>
+          </div>
+
+          <!-- Kanan: Class Diagram -->
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-sitemap" style="color: var(--accent-emerald)"></i> Class
+              Diagram & Struktur Multiplicity (1 .. *)</div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:6px;">
+              <div
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(56,189,248,0.3); border-radius:6px; padding:10px;">
+                <div
+                  style="font-weight:800; color:var(--accent-blue); font-size:0.8rem; border-bottom:1px solid var(--border-color); padding-bottom:4px;">
+                  Class: Material</div>
+                <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">
+                  + id : INT (PK)<br>+ sku : VARCHAR<br>+ min_stock : INT<br>+ max_stock : INT<br>+ current_stock : INT
+                </div>
+                <div
+                  style="font-size:0.72rem; color:var(--accent-emerald); margin-top:4px; border-top:1px dashed var(--border-color); padding-top:4px;">
+                  + updateStock()<br>+ checkStatus()
+                </div>
+              </div>
+
+              <div
+                style="background:rgba(255,255,255,0.03); border:1px solid rgba(16,185,129,0.3); border-radius:6px; padding:10px;">
+                <div
+                  style="font-weight:800; color:var(--accent-emerald); font-size:0.8rem; border-bottom:1px solid var(--border-color); padding-bottom:4px;">
+                  Class: StockMutation</div>
+                <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">
+                  + id : INT (PK)<br>+ material_id : INT (FK)<br>+ type : ENUM (IN/OUT)<br>+ qty : INT<br>+ created_at :
+                  TIMESTAMP
+                </div>
+                <div
+                  style="font-size:0.72rem; color:var(--accent-emerald); margin-top:4px; border-top:1px dashed var(--border-color); padding-top:4px;">
+                  + saveMutation()<br>+ rollback()
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.75rem; color:var(--text-main); margin-top:10px; line-height:1.4;">
+              <i class="fa-solid fa-link" style="color:var(--accent-orange)"></i> <strong>Kardinalitas:</strong> 1 objek
+              <code>Material</code> dapat memiliki banyak (<code>0..*</code>) objek <code>StockMutation</code>
+              terintegrasi.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: DESAIN BASIS DATA (NORMALISASI 3NF & RELASI) -->
+      <section class="slide" data-slide="10">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Basis Data</div>
+            <h2 class="slide-title">Desain Basis Data Relasional (Normalisasi 3NF)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 10 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-blue">
+            <div class="card-title"><i class="fa-solid fa-layer-group" style="color: var(--accent-blue)"></i> Tahapan
+              Normalisasi Basis Data hingga 3NF</div>
+            <p class="card-text">
+              Transformasi skema basis data dirancang untuk menghilangkan anomali insersi, pembaruan, dan penghapusan:
+            </p>
+            <ul class="clean-list" style="gap:8px;">
+              <li><strong>Bentuk Tidak Normal (UNF):</strong> Catatan logistik mentah masih mengandung atribut berganda
+                dan perulangan baris bahan baku dalam faktur.</li>
+              <li><strong>Bentuk Normal 1 (1NF):</strong> Menghilangkan <em>repeating groups</em> sehingga setiap kolom
+                bernilai tunggal dan atomik (<em>atomic value</em>).</li>
+              <li><strong>Bentuk Normal 2 (2NF):</strong> Menghilangkan ketergantungan fungsional parsial (<em>partial
+                  dependency</em>). Atribut master bahan baku dipisahkan sepenuhnya dari tabel transaksi.</li>
+              <li><strong>Bentuk Normal 3 (3NF):</strong> Menghilangkan ketergantungan transitif (<em>transitive
+                  dependency</em>). Tidak ada atribut non-kunci yang bergantung pada atribut non-kunci lainnya (contoh:
+                data akun petugas dipisah ke tabel <code>users</code>).</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-database" style="color: var(--accent-emerald)"></i> Struktur
+              Skema Relasional 3NF & Kardinalitas (1..*)</div>
+            <div style="padding-right: 6px;">
+              <table class="data-table" style="font-size: 0.8rem;">
+                <thead>
+                  <tr>
+                    <th>Tabel</th>
+                    <th>Struktur Kolom Utama & Tipe Data</th>
+                    <th>Relasi FK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>users</code></td>
+                    <td><code>id (INT PK)</code>, <code>name (VARCHAR)</code>, <code>role (ENUM)</code></td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><code>materials</code></td>
+                    <td><code>id (INT PK)</code>, <code>sku (UNIQUE)</code>, <code>min_stock</code>,
+                      <code>max_stock</code>, <code>current_stock (INT)</code>
+                    </td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><code>stock_entries</code></td>
+                    <td><code>id (PK)</code>, <code>qty (INT)</code>, <code>invoice_num</code>,
+                      <code>created_at (TIMESTAMP)</code>
+                    </td>
+                    <td><code>material_id</code>, <code>user_id</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>stock_exits</code></td>
+                    <td><code>id (PK)</code>, <code>qty (INT)</code>, <code>purpose (VARCHAR)</code>,
+                      <code>created_at (TIMESTAMP)</code>
+                    </td>
+                    <td><code>material_id</code>, <code>user_id</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; line-height:1.5;">
+                <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald)"></i>
+                <strong>Integritas Referensial:</strong> Relasi <em>One-to-Many (1..*)</em> dari <code>materials</code>
+                ke tabel mutasi stok menjamin riwayat audit dan akumulasi stok terintegrasi tanpa redudansi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: ALGORITMA INTI & REKONSILIASI STOK DINAMIS -->
+      <section class="slide" data-slide="11">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Implementasi Sistem</div>
+            <h2 class="slide-title">Logika Inti Transaksi & Rekonsiliasi Stok Dinamis</h2>
+          </div>
+          <span class="slide-number-badge">Slide 11 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-code" style="color: var(--accent-orange)"></i> Algoritma
+              Mutasi Stok Otomatis</div>
+            <p class="card-text">
+              Setiap kali transaksi dilakukan, sistem mengeksekusi transaksi database atomik untuk memperbarui angka
+              stok:
+            </p>
+            <div
+              style="background: rgba(0,0,0,0.35); padding: 14px; border-radius: var(--radius-sm); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #38bdf8; line-height: 1.6;">
+              // Transaksi Barang Masuk<br>
+              total_stock = total_stock + qty_masuk;<br><br>
+              // Transaksi Barang Keluar (Validasi Stok)<br>
+              IF (total_stock >= qty_keluar) {<br>
+              &nbsp;&nbsp;total_stock = total_stock - qty_keluar;<br>
+              } ELSE { THROW ERROR "Stok tidak mencukupi!"; }
+            </div>
+          </div>
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-emerald)"></i>
+              Fitur Unggulan: Rekonsiliasi Stok Dinamis</div>
+            <p class="card-text">
+              Perbedaan utama SIMP Lazatto dibanding sistem terdahulu adalah adanya kemampuan <strong>Rekonsiliasi Stok
+                Dinamis</strong>:
+            </p>
+            <ul class="clean-list">
+              <li>Apabila Admin melakukan <strong>Edit</strong> atau <strong>Hapus</strong> pada riwayat transaksi lama,
+                sistem otomatis menghitung selisih kuantitas dan merekonsiliasi nilai <code>total_stock</code> di
+                database.</li>
+              <li>Menjamin stok persediaan selalu presisi 100% dan kebal terhadap kesalahan ketik manusia (<em>human
+                  error</em>).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: IMPLEMENTASI UI/UX SIMP LSW -->
+      <section class="slide" data-slide="12">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Antarmuka Aplikasi</div>
+            <h2 class="slide-title">Implementasi Antarmuka Aplikasi (SIMP LSW)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 12 / 15</span>
+        </div>
+        <div class="slide-body">
+          <div class="mockup-container">
+            <div class="mockup-tabs">
+              <div class="mockup-tab active" data-mockup="dash"><i class="fa-solid fa-chart-line"></i> Dashboard Utama
+              </div>
+              <div class="mockup-tab" data-mockup="master"><i class="fa-solid fa-boxes-stacked"></i> Master Data &
+                Min-Max</div>
+              <div class="mockup-tab" data-mockup="trans"><i class="fa-solid fa-right-left"></i> Input Transaksi
+                Masuk/Keluar</div>
+            </div>
+
+            <!-- Tab Screen 1 -->
+            <div class="mockup-screen active" id="mockup-dash">
+              <div class="grid-3" style="margin-bottom: 12px;">
+                <div class="info-card" style="padding: 12px;">
+                  <div style="font-size: 0.74rem; color: var(--text-muted)">TOTAL BAHAN BAKU</div>
+                  <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-blue)">21 Item</div>
+                </div>
+                <div class="info-card" style="padding: 12px;">
+                  <div style="font-size: 0.74rem; color: var(--text-muted)">TOTAL NILAI ASET</div>
+                  <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-emerald)">Rp 11.797.500</div>
+                </div>
+                <div class="info-card" style="padding: 12px; border-left: 4px solid var(--accent-red)">
+                  <div style="font-size: 0.74rem; color: var(--text-muted)">STOK KRITIS (RE-ORDER)</div>
+                  <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-red)">2 Item</div>
+                </div>
+              </div>
+
+              <!-- VISUALISASI GRAFIK STOK BAHAN BAKU (AKTUAL VS MIN-MAX) -->
+              <div class="dashboard-chart-container">
+                <div class="chart-header">
+                  <div class="chart-title">
+                    <i class="fa-solid fa-chart-column" style="color:var(--accent-orange)"></i>
+                    <span>Grafik Visual Evaluasi Stok Aktual vs Batas Min-Max</span>
+                  </div>
+                  <div class="chart-legend">
+                    <span><i class="fa-solid fa-square" style="color:var(--accent-blue)"></i> Stok Aman</span>
+                    <span><i class="fa-solid fa-square" style="color:var(--accent-red)"></i> Kritis / Re-Order</span>
+                    <span><i class="fa-solid fa-grip-lines-vertical" style="color:#f59e0b"></i> Min/Max</span>
+                  </div>
+                </div>
+
+                <div class="chart-rows">
+                  <!-- Row 1: Ayam Original (Kritis) -->
+                  <div class="chart-row">
+                    <div class="chart-label">
+                      <span>Ayam Karkas Original</span>
+                      <span class="badge-status badge-kritis">Kritis (25 / 30 Kg)</span>
+                    </div>
+                    <div class="chart-track">
+                      <div class="chart-bar bar-kritis" style="width: 41.6%;"><span>25 Kg</span></div>
+                      <div class="chart-marker marker-min" style="left: 50%;" title="Batas Min: 30 Kg">
+                        <span>Min:30</span>
+                      </div>
+                      <div class="chart-marker marker-max" style="left: 90%;" title="Batas Max: 60 Kg">
+                        <span>Max:60</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row 2: Tepung Crispy -->
+                  <div class="chart-row">
+                    <div class="chart-label">
+                      <span>Tepung Crispy Bumbu</span>
+                      <span class="badge-status badge-aman">Aman (45 / 30 Kg)</span>
+                    </div>
+                    <div class="chart-track">
+                      <div class="chart-bar bar-aman" style="width: 80%;"><span>45 Kg</span></div>
+                      <div class="chart-marker marker-min" style="left: 50%;" title="Batas Min: 30 Kg"></div>
+                      <div class="chart-marker marker-max" style="left: 90%;" title="Batas Max: 50 Kg"></div>
+                    </div>
+                  </div>
+
+                  <!-- Row 3: Daging Burger -->
+                  <div class="chart-row">
+                    <div class="chart-label">
+                      <span>Daging Patty Burger</span>
+                      <span class="badge-status badge-aman">Aman (40 / 30 Pcs)</span>
+                    </div>
+                    <div class="chart-track">
+                      <div class="chart-bar bar-aman" style="width: 75%;"><span>40 Pcs</span></div>
+                      <div class="chart-marker marker-min" style="left: 55%;" title="Batas Min: 30 Pcs"></div>
+                      <div class="chart-marker marker-max" style="left: 90%;" title="Batas Max: 50 Pcs"></div>
+                    </div>
+                  </div>
+
+                  <!-- Row 4: Minyak Goreng (Kritis) -->
+                  <div class="chart-row">
+                    <div class="chart-label">
+                      <span>Minyak Goreng Sawit</span>
+                      <span class="badge-status badge-kritis">Kritis (18 / 20 Ltr)</span>
+                    </div>
+                    <div class="chart-track">
+                      <div class="chart-bar bar-kritis" style="width: 45%;"><span>18 Ltr</span></div>
+                      <div class="chart-marker marker-min" style="left: 50%;" title="Batas Min: 20 Ltr">
+                        <span>Min:20</span>
+                      </div>
+                      <div class="chart-marker marker-max" style="left: 90%;" title="Batas Max: 40 Ltr"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Screen 2 -->
+            <div class="mockup-screen" id="mockup-master">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>SKU</th>
+                    <th>Nama Bahan Baku</th>
+                    <th>Satuan</th>
+                    <th>Batas Min</th>
+                    <th>Batas Max</th>
+                    <th>Stok Aktual</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>AYM-01</strong></td>
+                    <td>Ayam Original Lazatto</td>
+                    <td>Ktg</td>
+                    <td>30</td>
+                    <td>60</td>
+                    <td>25</td>
+                    <td><span class="badge badge-danger">RE-ORDER</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>TPG-02</strong></td>
+                    <td>Tepung Bumbu Crispy</td>
+                    <td>Kg</td>
+                    <td>30</td>
+                    <td>50</td>
+                    <td>45</td>
+                    <td><span class="badge badge-success">AMAN</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>DBE-05</strong></td>
+                    <td>Daging Burger Beef</td>
+                    <td>Pcs</td>
+                    <td>30</td>
+                    <td>50</td>
+                    <td>40</td>
+                    <td><span class="badge badge-success">AMAN</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Tab Screen 3 -->
+            <div class="mockup-screen" id="mockup-trans">
+              <div class="grid-2" style="margin-bottom: 14px;">
+                <div class="info-card">
+                  <div class="card-title" style="color: var(--accent-emerald)"><i
+                      class="fa-solid fa-arrow-down-long"></i> Input Bahan Masuk</div>
+                  <p class="card-text">Mencatat pasokan datang dari supplier dengan nomor faktur, kuantitas, dan
+                    keterangan. Stok langsung bertambah secara atomik.</p>
+                  <button class="btn-demo btn-demo-in" id="btnDemoIn" type="button"><i class="fa-solid fa-plus"></i>
+                    Simulasikan Masuk (+15 Kg)</button>
+                </div>
+                <div class="info-card">
+                  <div class="card-title" style="color: var(--accent-orange)"><i class="fa-solid fa-arrow-up-long"></i>
+                    Input Bahan Keluar</div>
+                  <p class="card-text">Mencatat konsumsi harian dapur atau bahan rusak. Dilengkapi validasi stok
+                    otomatis agar tidak terjadi stok negatif.</p>
+                  <button class="btn-demo btn-demo-out" id="btnDemoOut" type="button"><i class="fa-solid fa-minus"></i>
+                    Simulasikan Keluar (-10 Kg)</button>
+                </div>
+              </div>
+              <div class="demo-live-status" id="demoLiveStatus">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span class="demo-live-badge"><i class="fa-solid fa-database"></i> Live DB State:</span>
+                  <span>Stok Ayam Original: <strong id="demoStockValue">25 Kg</strong></span>
+                </div>
+                <button class="btn-demo-reset" id="btnDemoReset" type="button"><i class="fa-solid fa-rotate-right"></i>
+                  Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: LAPORAN & EARLY WARNING SYSTEM -->
+      <section class="slide" data-slide="13">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Pelaporan & Evaluasi</div>
+            <h2 class="slide-title">Laporan Manajemen & Peringatan Dini (Early Warning System)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 13 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-red">
+            <div class="card-title"><i class="fa-solid fa-bell" style="color: var(--accent-red)"></i> Peringatan Dini
+              Stok Kritis (EWS)</div>
+            <p class="card-text">
+              Sistem secara otomatis mendeteksi setiap perubahan stok bahan baku dan memberikan indikator visual
+              langsung:
+            </p>
+            <ul class="clean-list">
+              <li><strong>Badge Kritis (LOW / RE-ORDER):</strong> Memandu Admin untuk segera menerbitkan instruksi
+                pembelian sebelum bahan habis total.</li>
+              <li><strong>Mencegah Stockout:</strong> Menjamin kelancaran pelayanan jam sibuk restoran.</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-blue">
+            <div class="card-title"><i class="fa-solid fa-file-pdf" style="color: var(--accent-blue)"></i> Ekspor
+              Dokumen Resmi PDF</div>
+            <p class="card-text">
+              Menyediakan pembuatan laporan otomatis dengan filter periode tanggal untuk audit & evaluasi pimpinan:
+            </p>
+            <ul class="clean-list">
+              <li><strong>Cetak Laporan Persediaan:</strong> Rincian stok awal, masuk, keluar, akhir, serta status
+                kelayakan stok.</li>
+              <li><strong>Cetak Riwayat Mutasi:</strong> Jurnal logistik lengkap dengan identitas petugas eksekutor.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: PENGUJIAN SISTEM (BLACK BOX TESTING) -->
+      <section class="slide" data-slide="14">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Hasil Uji Coba</div>
+            <h2 class="slide-title">Pengujian Fungsionalitas Sistem (Black Box Testing)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 14 / 15</span>
+        </div>
+        <div class="slide-body">
+          <div class="info-card" style="padding: 16px;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Fitur yang Diuji</th>
+                  <th>Skenario Pengujian</th>
+                  <th>Hasil Uji</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Autentikasi & Multi-Role</td>
+                  <td>Login kredensial valid & pembatasan akses hak menu (Admin/Staff/Owner).</td>
+                  <td><span class="badge badge-success">BERHASIL</span></td>
+                  <td>Keamanan & peran teruji 100%</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Master Data & Min-Max</td>
+                  <td>Input/Edit/Hapus bahan baku & penetapan batas kritis Min-Max.</td>
+                  <td><span class="badge badge-success">BERHASIL</span></td>
+                  <td>Parameter tersimpan valid</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Transaksi Masuk & Keluar</td>
+                  <td>Pencatatan barang masuk & keluar beserta validasi stok mencukupi.</td>
+                  <td><span class="badge badge-success">BERHASIL</span></td>
+                  <td>Kalkulasi stok akurat</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Rekonsiliasi Stok Dinamis</td>
+                  <td>Koreksi / pembatalan transaksi oleh Admin pada riwayat lama.</td>
+                  <td><span class="badge badge-success">BERHASIL</span></td>
+                  <td>Otomatis hitung ulang presisi</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Laporan & Ekspor PDF</td>
+                  <td>Filter rentang waktu dan generasi dokumen resmi format PDF.</td>
+                  <td><span class="badge badge-success">BERHASIL</span></td>
+                  <td>Dokumen tercetak sempurna</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: KESIMPULAN & SARAN -->
+      <section class="slide" data-slide="15">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab V • Penutup</div>
+            <h2 class="slide-title">Kesimpulan & Saran Pengembangan</h2>
+          </div>
+          <span class="slide-number-badge">Slide 15 / 15</span>
+        </div>
+        <div class="slide-body grid-2">
+          <div class="info-card highlight-emerald">
+            <div class="card-title"><i class="fa-solid fa-circle-check" style="color: var(--accent-emerald)"></i>
+              Kesimpulan Penelitian</div>
+            <ul class="clean-list">
+              <li><strong>Otomatisasi Terpusat:</strong> SIMP LSW berbasis web berhasil mengintegrasikan dan mempercepat
+                pencatatan stok di Lazatto Stasiun Walantaka.</li>
+              <li><strong>Efektivitas Min-Max:</strong> Algoritma Min-Max dan <em>Early Warning System</em> terbukti
+                efektif mencegah <em>overstock</em> maupun kehabisan bahan baku.</li>
+              <li><strong>Integritas Data Tinggi:</strong> Ekspor laporan PDF dan fitur rekonsiliasi stok dinamis
+                menjamin akurasi data serta meminimalisir <em>human error</em>.</li>
+            </ul>
+          </div>
+          <div class="info-card highlight-orange">
+            <div class="card-title"><i class="fa-solid fa-lightbulb" style="color: var(--accent-orange)"></i> Saran
+              Pengembangan Lanjutan</div>
+            <ul class="clean-list">
+              <li><strong>Notifikasi Otomatis WhatsApp API:</strong> Mengirim pesan peringatan restock langsung ke
+                ponsel manajemen saat stok menyentuh batas kritis.</li>
+              <li><strong>Pengembangan Aplikasi Mobile (Android/iOS):</strong> Mempermudah Owner memantau fluktuasi
+                grafik persediaan secara fleksibel di mana saja.</li>
+            </ul>
+            <div
+              style="margin-top: 24px; text-align: center; padding: 18px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px dashed var(--border-color); display: flex; flex-direction: column; align-items: center; gap: 10px;">
+              <div class="logo-protective-box" style="padding: 8px 20px;">
+                <img src="logo.png" alt="Lazatto Chicken & Burger"
+                  style="height: 52px; width: auto; object-fit: contain;">
+              </div>
+              <div>
+                <div style="font-weight: 800; font-size: 1.15rem; color: var(--text-main);">TERIMA KASIH</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Sesi Tanya Jawab Sidang
+                  Skripsi • A. HAPENDI (1101221160)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Tombol Melayang Ganti Tema (Aktif Selalu & Di Dalam Layar Penuh Fullscreen) -->
+  <button class="floating-theme-toggle" id="floatingThemeBtn" title="Ganti Tema Terang/Gelap (T)">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+  </button>
+
+  <!-- Footer Controls / Navigation Bar -->
+  <footer class="presentation-footer">
+    <div class="footer-info">
+      <div style="font-weight: 700; font-size: 0.95rem;" id="footerSlideText">Slide 1 dari 15</div>
+      <div class="slide-progress-bar">
+        <div class="slide-progress-fill" id="slideProgressFill"></div>
+      </div>
+    </div>
+    <div class="footer-nav-buttons">
+      <button class="btn-nav" id="btnPrevSlide" disabled>
+        <i class="fa-solid fa-arrow-left"></i> Sebelumnya
+      </button>
+      <button class="btn-nav" id="btnNextSlide">
+        Selanjutnya <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Overview 15 Slide Modal -->
+  <div class="overview-modal" id="overviewModal">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1320px; margin: 0 auto;">
+      <h3 style="font-size: 1.5rem; font-weight: 800;">Daftar 15 Slide Sidang Skripsi</h3>
+      <button class="btn-icon" id="btnCloseOverview"><i class="fa-solid fa-xmark"></i> Tutup</button>
+    </div>
+    <div class="overview-grid" id="overviewGrid">
+      <!-- Generated by script.js -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
