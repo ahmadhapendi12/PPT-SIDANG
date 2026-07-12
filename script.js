@@ -104,7 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 15,
       category: "Bab V • Penutup",
       title: "Kesimpulan & Saran Pengembangan",
-      notes: "Kesimpulan skripsi ini: SIMP Lazatto berhasil mengotomatisasi stok, mencegah stockout/overstock melalui Min-Max, dan menjaga akurasi lewat rekonsiliasi dinamis. Terima kasih, saya siap menerima pertanyaan maupun arahan dari Dewan Penguji."
+      notes: "Kesimpulan skripsi ini: SIMP Lazatto berhasil mengotomatisasi stok, mencegah stockout/overstock melalui Min-Max, dan menjaga akurasi lewat rekonsiliasi dinamis."
+    },
+    {
+      id: 16,
+      category: "Penutup • Sidang Skripsi",
+      title: "Terima Kasih & Sesi Tanya Jawab",
+      notes: "Terima kasih banyak kepada Dewan Penguji dan Dosen Pembimbing atas waktu, perhatian, serta bimbingannya. Saya siap menerima pertanyaan, kritik, dan saran konstruktif dari Bapak/Ibu Dewan Penguji."
     }
   ];
 
@@ -132,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateSlideDisplay() {
     slides.forEach((slide, idx) => {
       if (idx === currentSlideIndex) {
+        slide.classList.remove('active');
+        void slide.offsetWidth; // Force reflow agar transisi Morph berputar ulang setiap ganti slide
         slide.classList.add('active');
       } else {
         slide.classList.remove('active');
