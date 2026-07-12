@@ -1700,7 +1700,9 @@ ul.clean-list li::before {
   color: var(--text-main);
 }
 
-/* Responsive Breakpoints & Adaptive Layouts */
+/* ====================================================
+   RESPONSIVE BREAKPOINTS & ADAPTIVE MOBILE LAYOUTS
+   ==================================================== */
 @media screen and (max-width: 1200px) {
   .stage-container {
     padding: 16px;
@@ -1725,7 +1727,8 @@ ul.clean-list li::before {
 
 @media screen and (max-width: 992px) {
   body {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: auto;
     min-height: 100vh;
   }
@@ -1742,17 +1745,27 @@ ul.clean-list li::before {
   .stage-container {
     padding: 12px;
     height: auto;
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 150px);
+    display: block;
   }
   .slides-wrapper {
     max-height: none;
     height: auto;
-    min-height: 600px;
+    min-height: auto;
   }
-  .slide {
+  /* SOLUSI UTAMA: Slide non-aktif disembunyikan total agar tidak bertumpuk memanjang di HP */
+  .slide:not(.active) {
+    display: none !important;
+  }
+  .slide.active {
+    display: flex !important;
     position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 480px;
     padding: 24px;
     overflow-y: visible;
+    transform: none !important;
   }
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -1763,26 +1776,181 @@ ul.clean-list li::before {
 }
 
 @media screen and (max-width: 768px) {
+  /* Topbar Header HP */
+  .presentation-topbar {
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
   .topbar-brand {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .topbar-logo-univ {
+    height: 38px;
+  }
+  .topbar-univ-heading {
+    font-size: 0.75rem;
+  }
+  .topbar-title {
+    font-size: 0.82rem;
+  }
+  .topbar-center-brand {
+    display: none; /* Sembunyikan logo tengah di HP agar hemat ruang header */
+  }
+  .topbar-controls {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+  }
+  .topbar-controls .btn-icon {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+
+  /* Slide Umum HP */
+  .slide.active {
+    padding: 18px 14px !important;
+    border-radius: 16px;
+  }
+  .slide-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+  .slide-title {
+    font-size: 1.22rem !important;
+    line-height: 1.32;
+  }
+  .slide-number-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  .card-title {
+    font-size: 0.98rem;
+  }
+  .card-text,
+  ul.clean-list li {
+    font-size: 0.86rem;
+  }
+
+  /* Slide 1 Cover di HP */
+  .cover-slide {
+    padding: 18px 14px !important;
+  }
+  .cover-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .header-univ {
+    font-size: 0.92rem;
+  }
+  .univ-logo-img {
+    height: 38px;
+  }
+  .fikom-logo-img {
+    height: 34px;
+  }
+  .cover-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .cover-title-main {
+    font-size: 1.3rem !important;
+    line-height: 1.35;
+  }
+  .cover-identity-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+  }
+  .identity-divider {
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
+  }
+  .collage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .collage-badge-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Layout Grid Utama HP */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  /* Tabel Responsif HP (Scroll Horizontal di dalam Kartu) */
+  .info-card,
+  .mockup-screen {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  .data-table {
+    width: 100%;
+    min-width: 480px;
+    font-size: 0.76rem;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 7px 8px;
+  }
+
+  /* Grafik Visual & Mockup UI di HP */
+  .mockup-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .mockup-tab {
+    font-size: 0.78rem;
+    padding: 8px 10px;
+    flex: 1 1 auto;
+    text-align: center;
+    justify-content: center;
+  }
+  .dashboard-chart-container {
+    padding: 12px;
+    overflow-x: auto;
+  }
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .chart-legend {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.72rem;
+  }
+  .chart-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
-  .topbar-title {
-    font-size: 0.95rem;
+  .chart-label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
   }
-  .hero-title {
-    font-size: 1.45rem;
-  }
-  .hero-meta-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
+
+  /* Footer Navigation HP */
   .presentation-footer {
     padding: 10px 14px;
     flex-direction: column;
@@ -1791,46 +1959,102 @@ ul.clean-list li::before {
   }
   .footer-info {
     width: 100%;
+    justify-content: space-between;
+  }
+  .slide-progress-bar {
+    flex: 1;
+    margin-left: 12px;
   }
   .footer-nav-buttons {
     width: 100%;
+    display: flex;
+    gap: 10px;
     justify-content: space-between;
   }
   .btn-nav {
     flex: 1;
     justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Tombol Melayang Tema & Modal Overview HP */
+  .floating-theme-toggle {
+    bottom: 100px;
+    right: 14px;
+    padding: 8px 14px;
+    font-size: 0.78rem;
   }
   .overview-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
   .overview-modal {
-    padding: 20px;
+    padding: 20px 14px;
+  }
+  .presenter-notes-drawer {
+    width: 90vw;
+    right: 5vw;
+    bottom: 90px;
+  }
+  .usecase-diagram-box {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  /* Responsif Kop & Footer PPT di HP saat Mode Layar Penuh */
+  body.is-fullscreen-mode .fullscreen-slide-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+  }
+  body.is-fullscreen-mode .fsh-left,
+  body.is-fullscreen-mode .fsh-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  body.is-fullscreen-mode .fsh-univ-text,
+  body.is-fullscreen-mode .fsh-prodi-text {
+    font-size: 0.78rem;
+  }
+  body.is-fullscreen-mode .fsh-logo-unbaja,
+  body.is-fullscreen-mode .fsh-logo-fikom {
+    height: 32px !important;
+  }
+  body.is-fullscreen-mode .fullscreen-slide-footer {
+    padding-top: 14px;
+    gap: 4px;
+  }
+  body.is-fullscreen-mode .fsf-number {
+    font-size: 0.95rem;
+  }
+  body.is-fullscreen-mode .fsf-name {
+    font-size: 0.75rem;
+    padding-left: 28px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .slide-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
   .slide-title {
-    font-size: 1.25rem;
+    font-size: 1.15rem !important;
   }
-  .overview-grid {
-    grid-template-columns: 1fr;
+  .cover-title-main {
+    font-size: 1.15rem !important;
   }
-  .mockup-tabs {
-    flex-wrap: wrap;
+  .topbar-controls .btn-icon {
+    padding: 5px 8px;
+    font-size: 0.72rem;
   }
-  .mockup-tab {
+  .btn-nav {
     font-size: 0.8rem;
-    padding: 8px 12px;
+    padding: 8px 10px;
   }
 }
 
 /* ==========================================
-   MODE LAYAR PENUH (FULLSCREEN ISOLATION & EFEK BINTANG JATUH)
+   MODE LAYAR PENUH (FULLSCREEN ISOLATION & KOP/FOOTER SLIDE PPT)
    ========================================== */
 body.is-fullscreen-mode .presentation-topbar,
 body.is-fullscreen-mode .presentation-footer {
@@ -1839,11 +2063,121 @@ body.is-fullscreen-mode .presentation-footer {
 
 body.is-fullscreen-mode .stage-container {
   height: 100vh;
-  padding: 2.2vh 2.5vw;
+  padding: 2.2vh 3vw;
 }
 
 body.is-fullscreen-mode .slides-wrapper {
   max-height: 96vh;
+}
+
+/* Sembunyikan header/footer khusus layar penuh di mode layar biasa */
+.fullscreen-slide-header,
+.fullscreen-slide-footer {
+  display: none;
+}
+
+/* Tampilkan KOP & FOOTER PPT elegan di SETIAP SLIDE khusus saat Mode Layar Penuh */
+body.is-fullscreen-mode .fullscreen-slide-header {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+body.is-fullscreen-mode .fsh-left,
+body.is-fullscreen-mode .fsh-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Frame Khusus Warna Putih agar Logo Tidak Pudar di Mode Gelap */
+.fsh-logo-unbaja,
+.fsh-logo-fikom,
+.univ-logo-img,
+.fikom-logo-img,
+.topbar-logo-univ,
+.topbar-logo-fakultas,
+.logo-protective-box img {
+  background: #ffffff !important;
+  padding: 5px 10px !important;
+  border-radius: 8px !important;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28) !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+body.is-fullscreen-mode .fsh-logo-unbaja {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+body.is-fullscreen-mode .fsh-logo-fikom {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+body.is-fullscreen-mode .fsh-univ-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+}
+
+body.is-fullscreen-mode .fsh-prodi-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+}
+
+body.is-fullscreen-mode .fullscreen-slide-footer {
+  display: flex !important;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+body.is-fullscreen-mode .fsf-top-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+body.is-fullscreen-mode .fsf-number {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-emerald);
+  min-width: 28px;
+}
+
+body.is-fullscreen-mode .fsf-line {
+  flex: 1;
+  height: 2px;
+  background: var(--text-main);
+  opacity: 0.45;
+}
+
+body.is-fullscreen-mode .fsf-name {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  padding-left: 42px;
+}
+
+/* Agar Slide 1 tidak ganda kepalanya saat mode layar penuh */
+body.is-fullscreen-mode .cover-slide .cover-header-bar {
+  display: none !important;
 }
 
 body.is-fullscreen-mode .slide.active {
