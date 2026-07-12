@@ -165,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update isi catatan presenter apabila drawer sedang terbuka
     updatePresenterNotesContent();
+
+    // Auto-scroll ke atas layar saat ganti slide di perangkat HP/Mobile
+    if (window.innerWidth <= 992) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 
   function goToNextSlide() {
@@ -322,6 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     stage.addEventListener('touchend', (e) => {
+      // Abaikan swipe ganti slide jika user menggeser elemen tabel, grafik, atau slider
+      if (e.target.closest('table') || e.target.closest('input[type="range"]') || e.target.closest('.info-card') || e.target.closest('.mockup-screen')) {
+        return;
+      }
       touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
     }, { passive: true });
