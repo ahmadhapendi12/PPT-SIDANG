@@ -708,6 +708,12 @@ body {
   gap: 16px;
 }
 
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
 /* Cards & Info Boxes */
 .info-card {
   background: rgba(255, 255, 255, 0.03);
@@ -739,6 +745,10 @@ body {
 
 .info-card.highlight-emerald {
   border-left: 4px solid var(--accent-emerald);
+}
+
+.info-card.highlight-purple {
+  border-left: 4px solid var(--accent-purple);
 }
 
 .card-title {
@@ -1065,6 +1075,7 @@ ul.clean-list li::before {
 .badge-warning { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
 .badge-danger { background: rgba(225, 37, 27, 0.15); color: #e1251b; border: 1px solid rgba(225, 37, 27, 0.3); }
 .badge-info { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); }
+.badge-purple { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3); }
 
 /* Architecture / UML Cards */
 .actor-card {
@@ -1212,6 +1223,247 @@ ul.clean-list li::before {
 
 .mockup-screen.active {
   display: block;
+}
+
+/* ==========================================
+   STRUKTUR MENU & WIREFRAME BLUEPRINT (SLIDE 12)
+   ========================================== */
+.menu-structure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.struktur-img-grid {
+  display: grid;
+  grid-template-columns: 56% 42%;
+  gap: 16px;
+  align-items: start;
+  margin-top: 4px;
+}
+
+.struktur-explanation-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+[data-theme="light"] .struktur-explanation-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+  color: #0f172a !important;
+}
+
+.menu-role-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-role-header {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.menu-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item-list > li {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-blue);
+}
+
+.menu-sub-list {
+  list-style: none;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-sub-list li {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wireframe-blueprint-box {
+  border: 2px dashed var(--accent-blue);
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(56, 189, 248, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wireframe-header-bar {
+  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.wireframe-topnav-bar {
+  border: 1.5px solid var(--accent-red);
+  background: rgba(220, 38, 38, 0.12);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.wireframe-body-grid {
+  display: grid;
+  grid-template-columns: 24% 74%;
+  gap: 14px;
+}
+
+.wireframe-sidebar {
+  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.wireframe-content-area {
+  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blueprint-app-grid {
+  display: grid;
+  grid-template-columns: 21% 77%;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.blueprint-sidebar {
+  border: 1.5px dashed #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+  font-size: 0.74rem;
+}
+
+.blueprint-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px dashed rgba(220, 38, 38, 0.3);
+  padding-bottom: 8px;
+}
+
+.blueprint-main-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blueprint-topbar {
+  border: 1.5px dashed #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+
+.blueprint-dashboard-grid {
+  display: grid;
+  grid-template-columns: 66% 32%;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.blueprint-card {
+  border: 1.5px dashed var(--accent-blue);
+  background: rgba(59, 130, 246, 0.04);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
+}
+
+[data-theme="light"] .menu-role-box,
+[data-theme="light"] .wireframe-header-bar,
+[data-theme="light"] .wireframe-topnav-bar,
+[data-theme="light"] .wireframe-sidebar,
+[data-theme="light"] .wireframe-content-area,
+[data-theme="light"] .blueprint-sidebar,
+[data-theme="light"] .blueprint-topbar,
+[data-theme="light"] .blueprint-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+  color: #0f172a !important;
 }
 
 /* ==========================================
@@ -1729,7 +1981,8 @@ ul.clean-list li::before {
   .slide-title {
     font-size: 1.5rem;
   }
-  .grid-4 {
+  .grid-4,
+  .grid-5 {
     grid-template-columns: repeat(2, 1fr);
   }
   .overview-grid {
@@ -1930,7 +2183,13 @@ ul.clean-list li::before {
   /* Layout Grid Utama HP (Ringkas dan Pas 1 Layar) */
   .grid-2,
   .grid-3,
-  .grid-4 {
+  .grid-4,
+  .grid-5,
+  .menu-structure-grid,
+  .struktur-img-grid,
+  .blueprint-app-grid,
+  .blueprint-dashboard-grid,
+  .wireframe-body-grid {
     grid-template-columns: 1fr !important;
     gap: 7px !important;
   }
@@ -2407,4 +2666,26 @@ body.is-fullscreen-mode .shooting-stars-container {
 .slide.active .mockup-container,
 .slide.active .data-table {
   animation: pptMorphHero 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
+
+/* ========================================================
+   MODE RINGAN (LITE MODE) - AGAR TIDAK BERAT / LAG DI LAPTOP
+   ======================================================== */
+body.lite-mode .aurora-blob,
+body.lite-mode .shooting-stars-container,
+body.lite-mode .floating-item {
+  display: none !important;
+}
+
+body.lite-mode .animated-bg-container {
+  background: radial-gradient(circle at 15% 15%, rgba(225, 37, 27, 0.10) 0%, transparent 45%),
+              radial-gradient(circle at 85% 85%, rgba(0, 163, 224, 0.10) 0%, transparent 45%),
+              var(--bg-main);
+}
+
+body.lite-mode #btnLiteToggle {
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
 }
