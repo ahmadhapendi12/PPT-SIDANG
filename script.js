@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 5,
       category: "Bab III • Metodologi",
       title: "Metodologi Pengembangan (SDLC Waterfall)",
-      notes: "Kami menggunakan SDLC Waterfall secara runtut mulai dari Requirement, Design (UML & ERD), Implementation (Laravel), hingga Verification (Black Box Testing 100% berhasil)."
+      notes: "Kami menggunakan model SDLC Waterfall (Ian Sommerville) melalui 5 tahapan berurutan: Requirement (Analisis Kebutuhan), Design (Perancangan UML & ERD), Implementation (Pengkodean Laravel & MySQL), Verification (Testing Black Box 100% akurat), hingga Maintenance (Penerapan & Pemeliharaan di SIMP Lazatto)."
     },
     {
       id: 6,
@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 12,
-      category: "Bab IV • Antarmuka Aplikasi",
-      title: "Implementasi Antarmuka Aplikasi (SIMP LSW)",
-      notes: "Berikut adalah antarmuka aplikasi SIMP LSW. Anda dapat beralih antar tab Dashboard, Master Data, dan Transaksi di layar ini, serta mencoba tombol simulasi transaksi barang masuk dan keluar."
+      category: "Bab IV • Rancangan Antarmuka & Struktur Menu",
+      title: "Struktur Menu & Rancangan Tampilan Program (SIMP LSW)",
+      notes: "Sesuai arahan dosen pembimbing, slide ini menampilkan rancangan struktur menu dan blueprint tampilan program (bukan tampilan program jadi). Struktur pohon menu dibagi berdasarkan 3 peran aktor: Staff Operasional, Admin Sistem, dan Owner/Pimpinan, lengkap dengan rancangan tata letak wireframe serta spesifikasi form inputnya."
     },
     {
       id: 13,
@@ -320,6 +320,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (floatingThemeBtn) {
     floatingThemeBtn.addEventListener('click', toggleTheme);
+  }
+
+  // ==========================================
+  // TOGGLE MODE RINGAN (CEPAT & ANTI-LAG DI LAPTOP)
+  // ==========================================
+  const btnLiteToggle = document.getElementById('btnLiteToggle');
+  const savedLite = localStorage.getItem('simp_ppt_lite') === 'true';
+  if (savedLite) {
+    document.body.classList.add('lite-mode');
+  }
+  if (btnLiteToggle) {
+    btnLiteToggle.addEventListener('click', () => {
+      document.body.classList.toggle('lite-mode');
+      const isLite = document.body.classList.contains('lite-mode');
+      localStorage.setItem('simp_ppt_lite', isLite);
+    });
   }
 
   // ==========================================
