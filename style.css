@@ -714,7 +714,6 @@ body {
   gap: 14px;
 }
 
-/* Cards & Info Boxes */
 .info-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
