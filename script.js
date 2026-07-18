@@ -4,29 +4,29 @@
  * 
  * Script Engine Lengkap & Interaktif:
  * 1. Navigasi Slide (Tombol, Keyboard, Swipe Touch Mobile, URL Hash)
- * 2. Catatan Presenter Khusus Sidang Skripsi (Slide 1 - 12)
- * 3. Daftar 12 Slide Interaktif (Modal Grid)
+ * 2. Catatan Presenter Khusus Sidang Skripsi (Slide 1 - 17)
+ * 3. Daftar 17 Slide Interaktif (Modal Grid)
  * 4. Simulasi Logika Min-Max Real-Time (Slide 4)
- * 5. Simulasi Transaksi Masuk/Keluar Live DB (Slide 9)
+ * 5. Simulasi Transaksi Masuk/Keluar Live DB
  * 6. Tema Gelap/Terang & Mode Cetak PDF
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
-  // DATA & KONFIGURASI 12 SLIDE SIDANG SKRIPSI
+  // DATA & KONFIGURASI 14 SLIDE SIDANG SKRIPSI
   // ==========================================
   const slideMetadata = [
     {
       id: 1,
       category: "Cover Skripsi",
       title: "Perancangan SIMP Lazatto Stasiun Walantaka",
-      notes: "Selamat pagi/siang Yang Terhormat Dewan Penguji dan Dosen Pembimbing. Perkenalkan saya A. Hapendi (NPM 1101221160). Hari ini saya akan mempresentasikan hasil skripsi saya mengenai Perancangan Sistem Informasi Manajemen Persediaan untuk Mengoptimalkan Stok Bahan Baku pada Lazatto Stasiun Walantaka."
+      notes: "Selamat pagi/siang Yang Terhormat Dewan Penguji dan Dosen Pembimbing. Perkenalkan saya A. Hapendi (NPM 1101221160). Hari ini saya akan mempresentasikan skripsi saya mengenai Perancangan Sistem Informasi Manajemen Persediaan untuk Mengoptimalkan Stok Bahan Baku pada Lazatto Stasiun Walantaka."
     },
     {
       id: 2,
       category: "Bab I • Pendahuluan",
       title: "Latar Belakang & Identifikasi Masalah",
-      notes: "Lazatto Stasiun Walantaka memiliki arus perputaran bahan baku yang sangat tinggi. Selama ini pencatatan masih konvensional (buku fisik), sehingga sering terjadi selisih stok, overstock bahan kadaluwarsa, maupun understock (kehabisan bahan saat jam sibuk). Transformasi digital menjadi urgensi utama."
+      notes: "Lazatto Stasiun Walantaka memiliki arus perputaran bahan baku yang sangat tinggi. Selama ini pencatatan masih konvensional (buku gudang fisik), sehingga sering terjadi selisih stok, overstock bahan kadaluwarsa, maupun understock (kehabisan bahan saat jam sibuk). Transformasi digital menjadi urgensi utama."
     },
     {
       id: 3,
@@ -37,80 +37,68 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 4,
       category: "Bab II • Landasan Teori",
-      title: "Metode Pengendalian Persediaan (Min-Max)",
-      notes: "Metode Min-Max menetapkan batas Safety Stock (Min) sebagai titik re-order dan batas maksimum (Max) agar modal tidak tergerus overstock. Silakan Dewan Penguji melihat simulasi interaktif di slide ini untuk mencoba skenario stok kritis, aman, dan berlebih."
+      title: "Metode Pengendalian Persediaan (Min-Max Inventory)",
+      notes: "Berdasarkan landasan teori dari Cahyani & Kartika (2020), metode Min-Max adalah mekanisme penataan ulang di mana batas Min menjadi titik pemicu pemesanan ulang dan batas Max menjadi target tingkat persediaan baru. Selisih antara Max dan Min diartikan sebagai EOQ (Economic Order Quantity). Silakan Dewan Penguji melihat simulasi interaktif di slide ini untuk mencoba skenario stok kritis, aman, dan berlebih."
     },
     {
       id: 5,
-      category: "Bab III • Metodologi",
-      title: "Metodologi Pengembangan (SDLC Waterfall)",
-      notes: "Kami menggunakan model SDLC Waterfall (Ian Sommerville) melalui 5 tahapan berurutan: Requirement (Analisis Kebutuhan), Design (Perancangan UML & ERD), Implementation (Pengkodean Laravel & MySQL), Verification (Testing Black Box 100% akurat), hingga Maintenance (Penerapan & Pemeliharaan di SIMP Lazatto)."
+      category: "Bab II • Tinjauan Pustaka & Kebaruan Penelitian",
+      title: "State of the Art: Perbedaan Penelitian Terdahulu & Novelty",
+      notes: "Pada slide ini disajikan komparasi ringkas antara penelitian terdahulu dengan SIMP Lazatto pada aspek audit trail RBAC, kendali Min-Max real-time, dan rekonsiliasi stok dinamis. Terdapat pula 3 pilar novelty yaitu Rekonsiliasi Stok Dinamis Presisi, adaptasi Min-Max untuk fast food, serta pemisahan tugas operasional yang tegas."
     },
     {
       id: 6,
-      category: "Bab IV • Rancangan Sistem",
-      title: "Arsitektur & Pembagian Peran Aktor",
-      notes: "Sistem membagi peran menjadi 3 aktor utama: Staff Operasional (input transaksi lapangan), Admin Sistem (master data & rekonsiliasi), serta Owner/Pimpinan (monitoring evaluasi & ekspor laporan)."
+      category: "Bab III • Metodologi Penelitian",
+      title: "Metodologi Pengembangan Sistem (SDLC Waterfall)",
+      notes: "Model pengembangan menggunakan SDLC Waterfall (Ian Sommerville) melalui 5 tahapan berurutan: Requirement, Design, Implementation, Verification (Black Box 100% akurat), dan Maintenance."
     },
     {
       id: 7,
-      category: "Bab IV • Rancangan Sistem (UML 1)",
-      title: "Perancangan Use Case Diagram & Interaksi Aktor",
-      notes: "Pada Use Case Diagram ini menggambarkan interaksi 3 aktor utama: Staff Operasional, Admin Sistem, dan Owner. Setiap aktor memiliki hak akses terstruktur mulai dari kelola master bahan baku, input mutasi stok, hingga pencetakan laporan PDF."
+      category: "Bab IV • Analisis Sistem Berjalan",
+      title: "Analisis Alur Kerja & Use Case Diagram Sistem Berjalan",
+      notes: "Analisis alur sistem berjalan (manual) memperlihatkan Staff dan Admin yang masih mencatat mutasi di buku fisik serta merekap ke spreadsheet mingguan. Kelemahan utamanya adalah rawan human error dan ketiadaan indikator EWS saat stok menipis, yang menjadi landasan perancangan sistem usulan."
     },
     {
       id: 8,
-      category: "Bab IV • Rancangan Sistem (UML 2)",
-      title: "Activity Diagram Alur Transaksi & Evaluasi Min-Max",
-      notes: "Activity Diagram memperlihatkan alur kerja sistem saat terjadinya mutasi barang masuk atau keluar. Sistem secara otomatis mengevaluasi ketersediaan stok serta mengecek batas kritis Min-Max untuk memicu peringatan Re-order."
+      category: "Bab IV • Rancangan Sistem Usulan (UML 1)",
+      title: "Use Case Diagram Sistem Usulan (SIMP Lazatto)",
+      notes: "Use Case Diagram Sistem Usulan memodelkan interaksi 3 aktor utama (Staff Operasional, Admin Sistem, dan Owner) dalam sistem web terintegrasi. Admin dan Staff mengelola transaksi serta master data, sedangkan Owner memantau evaluasi EWS dan mengunduh laporan PDF."
     },
     {
       id: 9,
-      category: "Bab IV • Rancangan Sistem (UML 3)",
-      title: "Sequence Diagram & Class Diagram Arsitektur",
-      notes: "Sequence diagram menjelaskan interaksi objek berbasis arsitektur MVC dari antarmuka hingga eksekusi query database. Sedangkan Class Diagram memodelkan struktur kelas Material, StockMutation, User, dan Report dengan kardinalitas One-to-Many."
+      category: "Bab IV • Rancangan Sistem Usulan (UML 2)",
+      title: "Sequence Diagram & Class Diagram Arsitektur SIMP",
+      notes: "Sequence diagram menjelaskan interaksi objek dari antarmuka hingga eksekusi query database. Sedangkan Class Diagram memodelkan arsitektur kelas User, Material, StockEntries, dan StockExits dengan kardinalitas One-to-Many."
     },
     {
       id: 10,
-      category: "Bab IV • Rancangan Basis Data",
-      title: "Desain Basis Data Relasional (3NF)",
-      notes: "Normalisasi database mencapai tahap 3NF dengan 4 tabel inti: users, materials, stock_entries, dan stock_exits yang terhubung dengan foreign key dan dilengkapi jejak audit."
+      category: "Bab IV • Rancangan Antarmuka & Struktur Menu",
+      title: "Struktur Menu & Blueprint Wireframe Program (SIMP LSW)",
+      notes: "Slide ini menampilkan rancangan struktur menu dan blueprint tampilan program (wireframe). Struktur pohon menu dibagi berdasarkan 3 peran aktor (Staff, Admin, Owner), lengkap dengan spesifikasi form input dan simulasi interaktif."
     },
     {
       id: 11,
-      category: "Bab IV • Implementasi Sistem",
-      title: "Logika Inti & Rekonsiliasi Stok Dinamis",
-      notes: "Keunggulan inovatif sistem ini adalah Rekonsiliasi Stok Dinamis. Jika Admin memperbaiki atau menghapus transaksi lama, stok total_stock otomatis dikalkulasi ulang secara presisi tanpa merusak integritas data."
+      category: "Bab IV • Pelaporan & Evaluasi",
+      title: "Laporan Manajemen & Peringatan Dini (Early Warning System)",
+      notes: "Early Warning System (EWS) mendeteksi secara live saat stok menyentuh batas minimum dan memberi badge RE-ORDER. Seluruh laporan persediaan dan riwayat mutasi dapat diekspor ke format resmi PDF."
     },
     {
       id: 12,
-      category: "Bab IV • Rancangan Antarmuka & Struktur Menu",
-      title: "Struktur Menu & Rancangan Tampilan Program (SIMP LSW)",
-      notes: "Sesuai arahan dosen pembimbing, slide ini menampilkan rancangan struktur menu dan blueprint tampilan program (bukan tampilan program jadi). Struktur pohon menu dibagi berdasarkan 3 peran aktor: Staff Operasional, Admin Sistem, dan Owner/Pimpinan, lengkap dengan rancangan tata letak wireframe serta spesifikasi form inputnya."
+      category: "Bab IV • Hasil Uji Coba",
+      title: "Pengujian Fungsionalitas Sistem (Black Box Testing)",
+      notes: "Seluruh skenario pengujian utama (Autentikasi RBAC, Master Min-Max, Transaksi, Rekonsiliasi Dinamis, dan Ekspor PDF) telah diuji menggunakan metode Black Box Testing dengan hasil 100% BERHASIL."
     },
     {
       id: 13,
-      category: "Bab IV • Pelaporan & Evaluasi",
-      title: "Laporan Manajemen & Early Warning System",
-      notes: "Early Warning System (EWS) mendeteksi secara real-time saat stok menembus batas minimum dan memberi label RE-ORDER agar Admin segera restock. Seluruh laporan dapat diekspor ke PDF."
+      category: "Bab V • Penutup",
+      title: "Kesimpulan & Saran Pengembangan",
+      notes: "Kesimpulan penelitian ini: SIMP Lazatto berbasis web berhasil mengotomatisasi persediaan, mencegah stockout/overstock via Min-Max, dan menjaga akurasi lewat rekonsiliasi dinamis."
     },
     {
       id: 14,
-      category: "Bab IV • Hasil Uji Coba",
-      title: "Pengujian Fungsionalitas (Black Box Testing)",
-      notes: "Seluruh skenario pengujian utama (Autentikasi, Master Min-Max, Transaksi Masuk/Keluar, Rekonsiliasi, dan Ekspor PDF) diuji menggunakan Black Box Testing dengan hasil 100% BERHASIL."
-    },
-    {
-      id: 15,
-      category: "Bab V • Penutup",
-      title: "Kesimpulan & Saran Pengembangan",
-      notes: "Kesimpulan skripsi ini: SIMP Lazatto berhasil mengotomatisasi stok, mencegah stockout/overstock melalui Min-Max, dan menjaga akurasi lewat rekonsiliasi dinamis."
-    },
-    {
-      id: 16,
       category: "Penutup • Sidang Skripsi",
       title: "Terima Kasih & Sesi Tanya Jawab",
-      notes: "Terima kasih banyak kepada Dewan Penguji dan Dosen Pembimbing atas waktu, perhatian, serta bimbingannya. Saya siap menerima pertanyaan, kritik, dan saran konstruktif dari Bapak/Ibu Dewan Penguji."
+      notes: "Terima kasih banyak kepada Dewan Penguji dan Dosen Pembimbing atas waktu, perhatian, serta bimbingannya. Saya siap menerima pertanyaan, masukan, dan arahan konstruktif dari Bapak/Ibu Dewan Penguji."
     }
   ];
 
@@ -161,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slideProgressFill) {
       const percentage = (slideNumber / totalSlides) * 100;
       slideProgressFill.style.width = `${percentage}%`;
+    }
+    const badge = slides[currentSlideIndex] && slides[currentSlideIndex].querySelector('.slide-number-badge');
+    if (badge) {
+      badge.textContent = `Slide ${slideNumber} / ${totalSlides}`;
     }
 
     // Tombol Prev / Next state
@@ -407,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCloseNotes) btnCloseNotes.addEventListener('click', () => togglePresenterNotes(false));
 
   // ==========================================
-  // DAFTAR 12 SLIDE (OVERVIEW MODAL)
+  // DAFTAR 17 SLIDE (OVERVIEW MODAL)
   // ==========================================
   const overviewModal = document.getElementById('overviewModal');
   const btnOverviewToggle = document.getElementById('btnOverviewToggle');
@@ -554,7 +546,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateSimulator();
 
   // ==========================================
-  // TAB MOCKUP APLIKASI (SLIDE 9)
+  // TAB MOCKUP APLIKASI (SLIDE 10)
   // ==========================================
   const mockupTabs = document.querySelectorAll('.mockup-tab');
   const mockupScreens = document.querySelectorAll('.mockup-screen');
@@ -575,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // LIVE DEMO TRANSAKSI BAHAN MASUK & KELUAR (SLIDE 9)
+  // LIVE DEMO TRANSAKSI BAHAN MASUK & KELUAR (SLIDE 10)
   // ==========================================
   let demoStock = 25;
   const demoStockValue = document.getElementById('demoStockValue');
