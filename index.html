@@ -206,7 +206,7 @@
             <div class="slide-category">Bab I • Pendahuluan</div>
             <h2 class="slide-title">Latar Belakang & Identifikasi Masalah</h2>
           </div>
-          <span class="slide-number-badge">Slide 2 / 15</span>
+          <span class="slide-number-badge">Slide 2 / 14</span>
         </div>
         <div class="slide-body grid-2">
           <div class="info-card highlight-red">
@@ -271,7 +271,7 @@
             <div class="slide-category">Bab I • Pendahuluan</div>
             <h2 class="slide-title">Rumusan Masalah, Tujuan & Batasan Penelitian</h2>
           </div>
-          <span class="slide-number-badge">Slide 3 / 15</span>
+          <span class="slide-number-badge">Slide 3 / 14</span>
         </div>
         <div class="slide-body grid-3">
           <div class="info-card highlight-blue">
@@ -335,24 +335,38 @@
             <div class="slide-category">Bab II • Landasan Teori</div>
             <h2 class="slide-title">Metode Pengendalian Persediaan (Min-Max Inventory)</h2>
           </div>
-          <span class="slide-number-badge">Slide 4 / 15</span>
+          <span class="slide-number-badge">Slide 4 / 14</span>
         </div>
         <div class="slide-body grid-2">
-          <div class="info-card highlight-orange">
-            <div class="card-title"><i class="fa-solid fa-calculator" style="color: var(--accent-orange)"></i> Konsep &
-              Parameter Metode Min-Max</div>
-            <p class="card-text">
-              Metode <em>Min-Max</em> mengendalikan stok berdasarkan dua batas kritis yang ditentukan untuk setiap item
-              bahan baku:
-            </p>
-            <ul class="clean-list">
-              <li><strong>Batas Minimum (Min / Safety Stock):</strong> Titik pemicu pemesanan kembali (<em>Reorder
-                  Point</em>). Jika stok $\le$ Min, sistem memberi peringatan <strong>KRITIS / RE-ORDER</strong>.</li>
-              <li><strong>Batas Maksimum (Max):</strong> Batas kuantitas simpan atas agar gudang tidak mengalami
-                kelebihan stok (<em>Overstock</em>).</li>
-              <li><strong>Zona Aman:</strong> Kondisi stok berada di antara batas minimum dan maksimum (Min &lt; Stok
-                $\le$ Max).</li>
-            </ul>
+          <div class="info-card highlight-orange"
+            style="display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto; max-height:72vh;">
+            <div>
+              <div class="card-title"><i class="fa-solid fa-book-journal-whills" style="color: var(--accent-orange)"></i>
+                Teori & Landasan Konseptual Min-Max</div>
+
+              <!-- Boks Kutipan Teori Peneliti -->
+              <div
+                style="background:rgba(245,158,11,0.12); border-left:4px solid var(--accent-orange); border-radius:8px; padding:12px; margin-bottom:14px;">
+                <div style="font-weight:800; font-size:0.8rem; color:var(--accent-orange); margin-bottom:4px;">
+                  <i class="fa-solid fa-quote-left"></i> Definisi Menurut Ahli / Peneliti:
+                </div>
+                <p style="font-size:0.75rem; color:var(--text-main); font-style:italic; line-height:1.5; margin:0 0 6px 0;">
+                  "Metode min-max adalah mekanisme penataan ulang dasar yang telah diterapkan di banyak Enterprise Resource Planning (ERP) dan jenis lain dari perangkat lunak manajemen persediaan. 'Min' merupakan nilai tingkat persediaan yang memicu pemesanan ulang dan 'Max' merupakan nilai tingkat persediaan baru yang ditargetkan mengikuti pemesanan ulang tersebut. Perbedaan antara Max dan Min sering diartikan sebagai EOQ (Economic Order Quantity)."
+                </p>
+                <div style="font-size:0.72rem; font-weight:700; color:var(--text-muted); text-align:right;">
+                  — Cahyani &amp; Kartika (2020)
+                </div>
+              </div>
+
+              <p class="card-text" style="font-size:0.76rem; margin-bottom:8px;">
+                Berdasarkan landasan teori dari Cahyani &amp; Kartika (2020), SIMP Lazatto menerapkan 3 parameter kontrol utama:
+              </p>
+              <ul class="clean-list" style="font-size:0.76rem;">
+                <li><strong>Batas Minimum (Min):</strong> Titik pemicu pemesanan ulang (<em>Reorder Point</em>). Jika stok $\le$ Min, sistem otomatis memberi peringatan <strong>KRITIS / RE-ORDER</strong>.</li>
+                <li><strong>Batas Maksimum (Max):</strong> Target tingkat persediaan baru setelah pemesanan ulang untuk mencegah <em>Overstock</em>.</li>
+                <li><strong>Selisih (Max - Min / EOQ):</strong> Kuantitas optimal pemesanan ulang untuk mencapai target zona aman persediaan.</li>
+              </ul>
+            </div>
           </div>
           <div class="simulator-box">
             <div class="card-title"><i class="fa-solid fa-gamepad" style="color: var(--accent-blue)"></i> Simulasi
@@ -401,8 +415,125 @@
         </div>
       </section>
 
-      <!-- SLIDE 5: METODOLOGI PENELITIAN (SDLC WATERFALL) -->
+      <!-- SLIDE 5: STATE OF THE ART & NOVELTY (PERBEDAAN PENELITIAN TERDAHULU VS PENELITIAN SAYA) -->
       <section class="slide" data-slide="5">
+        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
+        <div class="fullscreen-slide-header">
+          <div class="fsh-left">
+            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
+            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
+          </div>
+          <div class="fsh-right">
+            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
+            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
+          </div>
+        </div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab II • Tinjauan Pustaka & Kebaruan Penelitian</div>
+            <h2 class="slide-title">State of the Art: Perbedaan Penelitian Terdahulu & Novelty</h2>
+          </div>
+          <span class="slide-number-badge">Slide 5 / 14</span>
+        </div>
+        <div class="slide-body grid-2">
+          <!-- Kiri: Tabel Komparasi Ringkas Penelitian Terdahulu vs Penelitian Saya -->
+          <div class="info-card highlight-blue"
+            style="overflow-y:auto; max-height:72vh; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div class="card-title" style="margin-bottom:10px;">
+                <i class="fa-solid fa-scale-balanced" style="color: var(--accent-blue)"></i>
+                Komparasi Ringkas Penelitian Terdahulu vs SIMP Lazatto
+              </div>
+              <table class="data-table" style="font-size:0.74rem;">
+                <thead>
+                  <tr>
+                    <th style="width:28%;">Aspek Komparasi</th>
+                    <th style="width:36%;">Penelitian Terdahulu (Umum)</th>
+                    <th style="width:36%;">Penelitian Saya (SIMP Lazatto)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Hak Akses &amp; Audit Trail</strong></td>
+                    <td>Pencatatan 1 arah tanpa pemisahan peran &amp; tanpa log identitas.</td>
+                    <td><strong>Multi-Role RBAC (3 Peran)</strong> + rekam jejak waktu &amp; petugas eksekutor.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kendali Persediaan</strong></td>
+                    <td>Batas restock statis/intuisi tanpa kalkulasi pengaman.</td>
+                    <td><strong>Metode Min-Max</strong> (Safety Stock &amp; Max Limit Real-Time).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Koreksi Data (Reconciliation)</strong></td>
+                    <td>Salah ketik merusak saldo akhir &amp; wajib hitung ulang manual.</td>
+                    <td><strong>Rekonsiliasi Dinamis:</strong> Kalkulasi ulang otomatis presisi pada <code>total_stock</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Peringatan &amp; Laporan</strong></td>
+                    <td>Laporan statis akhir bulan tanpa peringatan stok kritis.</td>
+                    <td><strong>EWS Live Badge <code>RE-ORDER</code></strong> &amp; ekspor laporan PDF multi-periode.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              style="font-size:0.74rem; color:var(--text-main); margin-top:10px; background:rgba(59,130,246,0.08); padding:8px 12px; border-radius:6px; border-left:3px solid var(--accent-blue);">
+              <i class="fa-solid fa-check-double" style="color:var(--accent-blue)"></i> <strong>Kesimpulan:</strong> SIMP Lazatto menyempurnakan kelemahan sistem terdahulu melalui otomatisasi rekonsiliasi dan kendali Min-Max real-time.
+            </div>
+          </div>
+
+          <!-- Kanan: 3 Pilar Kebaruan (Novelty) Ringkas & Padat -->
+          <div class="info-card highlight-emerald"
+            style="overflow-y:auto; max-height:72vh; display:flex; flex-direction:column; gap:12px;">
+            <div class="card-title" style="margin-bottom:6px;">
+              <i class="fa-solid fa-gem" style="color: var(--accent-emerald)"></i>
+              Pilar Kebaruan (Novelty Penelitian)
+            </div>
+            <div
+              style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.3); border-radius:10px; padding:12px;">
+              <div
+                style="font-weight:800; font-size:0.85rem; color:var(--accent-emerald); margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> 1. Rekonsiliasi Stok Dinamis Presisi
+              </div>
+              <p style="font-size:0.76rem; color:var(--text-main); margin:0; line-height:1.45;">
+                Sistem otomatis mengkalibrasi ulang nilai <code>total_stock</code> saat terjadi koreksi/penghapusan pada transaksi lampau tanpa merusak jejak historis mutasi.
+              </p>
+            </div>
+            <div
+              style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3); border-radius:10px; padding:12px;">
+              <div
+                style="font-weight:800; font-size:0.85rem; color:var(--accent-orange); margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                <i class="fa-solid fa-layer-group"></i> 2. Adaptasi Min-Max Fast Food Logistik
+              </div>
+              <p style="font-size:0.76rem; color:var(--text-main); margin:0; line-height:1.45;">
+                Penerapan Min-Max khusus bahan berkarakter cepat rusak (<em>perishable</em>) dengan perputaran tinggi di Stasiun Walantaka, mencegah overstock dan kehabisan bahan.
+              </p>
+            </div>
+            <div
+              style="background:rgba(168,85,247,0.08); border:1px solid rgba(168,85,247,0.3); border-radius:10px; padding:12px;">
+              <div
+                style="font-weight:800; font-size:0.85rem; color:#a855f7; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                <i class="fa-solid fa-user-shield"></i> 3. Pemisahan Tugas (Segregation of Duties)
+              </div>
+              <p style="font-size:0.76rem; color:var(--text-main); margin:0; line-height:1.45;">
+                Pembagian wewenang spesifik: Staff fokus pencatatan lapangan, Admin kendali &amp; koreksi transaksi, dan Owner pengawasan eksekutif bersertifikasi PDF.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
+        <div class="fullscreen-slide-footer">
+          <div class="fsf-top-row">
+            <span class="fsf-number">05</span>
+            <div class="fsf-line"></div>
+          </div>
+          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: METODOLOGI PENELITIAN (SDLC WATERFALL) -->
+      <section class="slide" data-slide="6">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
           <div class="fsh-left">
@@ -419,14 +550,15 @@
             <div class="slide-category">Bab III • Metodologi Penelitian</div>
             <h2 class="slide-title">Metodologi Pengembangan Sistem (SDLC Waterfall)</h2>
           </div>
-          <span class="slide-number-badge">Slide 5 / 15</span>
+          <span class="slide-number-badge">Slide 6 / 14</span>
         </div>
         <div class="slide-body">
           <div class="grid-5">
             <div class="info-card highlight-blue">
               <div class="card-title"><span class="badge badge-info">1</span> Requirement</div>
               <p class="card-text">
-                Analisis kebutuhan melalui observasi langsung di restoran, wawancara dengan Owner (Ibu Sunaimah S.E), dan
+                Analisis kebutuhan melalui observasi langsung di restoran, wawancara dengan Owner (Ibu Sunaimah S.E),
+                dan
                 studi literatur pengendalian persediaan.
               </p>
             </div>
@@ -463,91 +595,11 @@
             <div class="card-title"><i class="fa-solid fa-arrows-spin" style="color: var(--accent-blue)"></i> Alur
               Siklus Pengembangan Sistem (5 Tahap Waterfall)</div>
             <p class="card-text">
-              Penerapan model <em>SDLC Waterfall</em> (Ian Sommerville) secara berurutan mulai dari <strong>Requirement, Design, Implementation, Verification (Testing), hingga Maintenance</strong> memberikan pendekatan terstruktur dan sistematis, memastikan peralihan dari pencatatan konvensional ke sistem informasi web berjalan mulus tanpa mengganggu operasional dapur Lazatto.
+              Penerapan model <em>SDLC Waterfall</em> (Ian Sommerville) secara berurutan mulai dari <strong>Requirement,
+                Design, Implementation, Verification (Testing), hingga Maintenance</strong> memberikan pendekatan
+              terstruktur dan sistematis, memastikan peralihan dari pencatatan konvensional ke sistem informasi web
+              berjalan mulus tanpa mengganggu operasional dapur Lazatto.
             </p>
-          </div>
-        </div>
-
-        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-footer">
-          <div class="fsf-top-row">
-            <span class="fsf-number">05</span>
-            <div class="fsf-line"></div>
-          </div>
-          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
-        </div>
-      </section>
-
-      <!-- SLIDE 6: ARSITEKTUR & PERAN AKTOR (UML) -->
-      <section class="slide" data-slide="6">
-        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-header">
-          <div class="fsh-left">
-            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
-            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
-          </div>
-          <div class="fsh-right">
-            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
-            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
-          </div>
-        </div>
-        <div class="slide-header">
-          <div>
-            <div class="slide-category">Bab IV • Rancangan Sistem</div>
-            <h2 class="slide-title">Arsitektur Pengguna & Pembagian Peran Aktor (Use Case)</h2>
-          </div>
-          <span class="slide-number-badge">Slide 6 / 15</span>
-        </div>
-        <div class="slide-body grid-3">
-          <div class="actor-card" style="border-top: 4px solid var(--accent-emerald);">
-            <div class="actor-header">
-              <div class="actor-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
-                <i class="fa-solid fa-user-gear"></i>
-              </div>
-              <div>
-                <div class="actor-role">Staff Operasional</div>
-                <div class="actor-desc">Staf Dapur & Gudang</div>
-              </div>
-            </div>
-            <ul class="clean-list">
-              <li>Input transaksi <strong>Bahan Baku Masuk</strong> saat penerimaan pasokan.</li>
-              <li>Input transaksi <strong>Bahan Baku Keluar</strong> untuk pemakaian dapur / rusak.</li>
-              <li>Melihat riwayat transaksi dan status stok terkini di lapangan.</li>
-            </ul>
-          </div>
-
-          <div class="actor-card" style="border-top: 4px solid var(--accent-blue);">
-            <div class="actor-header">
-              <div class="actor-icon" style="background: rgba(59, 130, 246, 0.15); color: var(--accent-blue);">
-                <i class="fa-solid fa-user-shield"></i>
-              </div>
-              <div>
-                <div class="actor-role">Admin Sistem</div>
-                <div class="actor-desc">Kepala Restoran / Pengelola</div>
-              </div>
-            </div>
-            <ul class="clean-list">
-              <li>Akses penuh kelola <strong>Master Data Bahan Baku</strong> & parameter Min-Max.</li>
-              <li>Manajemen akun pengguna (<strong>Kelola User</strong> & Role Access).</li>
-              <li><strong>Koreksi / Rekonsiliasi</strong> transaksi (Edit & Hapus) serta unduh Laporan PDF.</li>
-            </ul>
-          </div>
-
-          <div class="actor-card" style="border-top: 4px solid var(--accent-orange);">
-            <div class="actor-header">
-              <div class="actor-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-orange);">
-                <i class="fa-solid fa-user-tie"></i>
-              </div>
-              <div>
-                <div class="actor-role">Owner / Pimpinan</div>
-                <div class="actor-desc">Pemilik Restoran</div>
-              </div>
-            </div>
-            <ul class="clean-list">
-              <li>Monitoring eksekutif real-time melalui <strong>Dashboard Pimpinan</strong>.</li>
-              <li>Memantau grafik evaluasi pergerakan bahan & status stok kritis.</li>
-              <li>Mengunduh dan mencetak <strong>Laporan Persediaan PDF</strong> untuk instruksi restock.</li>
-            </ul>
           </div>
         </div>
 
@@ -561,7 +613,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 7: RANCANGAN UML 1 - USE CASE DIAGRAM -->
+      <!-- SLIDE 7: ANALISIS SISTEM BERJALAN & USE CASE DIAGRAM SISTEM BERJALAN -->
       <section class="slide" data-slide="7">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
@@ -576,10 +628,120 @@
         </div>
         <div class="slide-header">
           <div>
-            <div class="slide-category">Bab IV • Rancangan Sistem (UML 1)</div>
-            <h2 class="slide-title">Perancangan Use Case Diagram & Interaksi Aktor</h2>
+            <div class="slide-category">Bab IV • Analisis Sistem Berjalan</div>
+            <h2 class="slide-title">Analisis Alur Kerja & Use Case Diagram Sistem Berjalan</h2>
           </div>
-          <span class="slide-number-badge">Slide 7 / 15</span>
+          <span class="slide-number-badge">Slide 7 / 14</span>
+        </div>
+        <div class="slide-body grid-2">
+          <!-- Kiri: Gambar Diagram Use Case Sistem Berjalan -->
+          <div class="info-card highlight-blue"
+            style="display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto; max-height:72vh;">
+            <div class="card-title" style="margin-bottom:10px;">
+              <i class="fa-solid fa-project-diagram" style="color: var(--accent-blue)"></i>
+              Use Case Diagram Sistem Berjalan (Konvensional)
+            </div>
+
+            <div
+              style="text-align:center; margin:auto 0; padding:10px; background:#ffffff; border-radius:12px; border:2px solid var(--border-color); box-shadow:0 4px 14px rgba(0,0,0,0.22);">
+              <img src="usecase_berjalan.png" alt="Use Case Diagram Sistem Berjalan"
+                style="max-width:100%; max-height:48vh; width:auto; object-fit:contain; display:block; margin:0 auto;">
+            </div>
+
+            <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:12px;">
+              <i class="fa-solid fa-users" style="color:var(--accent-blue)"></i> <strong>Aktor & Alur Berjalan:</strong>
+              Staff Dapur & Gudang (Mencatat stok masuk & pemakaian manual di buku fisik), Admin/Pengelola (Merekap data
+              harian ke spreadsheet mingguan), serta Owner Restoran (Memeriksa laporan manual & instruksi pengadaan).
+            </div>
+          </div>
+
+          <!-- Kanan: Spesifikasi Fungsional & Kendala Sistem Berjalan -->
+          <div class="info-card highlight-orange"
+            style="display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto; max-height:72vh;">
+            <div>
+              <div class="card-title" style="margin-bottom:10px;">
+                <i class="fa-solid fa-list-check" style="color: var(--accent-orange)"></i>
+                Spesifikasi Fungsional & Kendala Use Case Sistem Berjalan
+              </div>
+              <table class="data-table" style="font-size:0.76rem;">
+                <thead>
+                  <tr>
+                    <th style="width:16%;">Kode</th>
+                    <th style="width:36%;">Nama Use Case Berjalan</th>
+                    <th style="width:22%;">Aktor Utama</th>
+                    <th style="width:26%;">Kelemahan & Kendala</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>UC-B01</strong></td>
+                    <td>Mencatat Stok Masuk & Pemakaian</td>
+                    <td>Staff / Admin</td>
+                    <td>Pencatatan buku fisik rawan human error</td>
+                  </tr>
+                  <tr>
+                    <td><strong>UC-B02</strong></td>
+                    <td>Rekapitulasi Stok Awal & Laporan</td>
+                    <td>Staff / Admin</td>
+                    <td>Rekap manual lambat & tidak real-time</td>
+                  </tr>
+                  <tr>
+                    <td><strong>UC-B03</strong></td>
+                    <td>Menerima & Beri Instruksi Pengadaan</td>
+                    <td>Staff / Admin / Owner</td>
+                    <td>Tanpa indikator EWS saat batas kritis</td>
+                  </tr>
+                  <tr>
+                    <td><strong>UC-B04</strong></td>
+                    <td>Memantau Laporan Persediaan</td>
+                    <td>Admin / Owner</td>
+                    <td>Informasi terlambat bagi Owner</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.35); border-radius:10px; padding:10px; margin-top:12px;">
+              <div style="font-weight:800; font-size:0.78rem; color:var(--accent-orange); margin-bottom:4px;">
+                <i class="fa-solid fa-triangle-exclamation"></i> Kesimpulan Analisis Alur Berjalan:
+              </div>
+              <div style="font-size:0.73rem; color:var(--text-main); line-height:1.4;">
+                Pencatatan konvensional rawan selisih stok (<em>human error</em>) dan tidak memiliki peringatan dini (<em>EWS</em>) saat stok menipis. Hal ini menjadi dasar utama perancangan <strong>Use Case Sistem Usulan</strong> pada slide berikutnya.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
+        <div class="fullscreen-slide-footer">
+          <div class="fsf-top-row">
+            <span class="fsf-number">07</span>
+            <div class="fsf-line"></div>
+          </div>
+          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: RANCANGAN UML 1 - USE CASE DIAGRAM SISTEM USULAN -->
+      <section class="slide" data-slide="8">
+        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
+        <div class="fullscreen-slide-header">
+          <div class="fsh-left">
+            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
+            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
+          </div>
+          <div class="fsh-right">
+            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
+            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
+          </div>
+        </div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">Bab IV • Rancangan Sistem Usulan (UML 1)</div>
+            <h2 class="slide-title">Use Case Diagram Sistem Usulan (SIMP Lazatto)</h2>
+          </div>
+          <span class="slide-number-badge">Slide 8 / 14</span>
         </div>
         <div class="slide-body grid-2">
           <!-- Kiri: Gambar Diagram Asli Usecase.png -->
@@ -587,7 +749,7 @@
             style="display:flex; flex-direction:column; justify-content:space-between; overflow-y:auto; max-height:72vh;">
             <div class="card-title" style="margin-bottom:10px;">
               <i class="fa-solid fa-project-diagram" style="color: var(--accent-blue)"></i>
-              Use Case Diagram Sistem Informasi Manajemen Persediaan
+              Use Case Diagram Sistem Informasi Manajemen Persediaan Usulan
             </div>
 
             <div
@@ -597,7 +759,9 @@
             </div>
 
             <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:12px;">
-              <i class="fa-solid fa-shield-halved" style="color:var(--accent-blue)"></i> <strong>Aktor & RBAC(Role-Based Access Control):</strong>
+              <i class="fa-solid fa-shield-halved" style="color:var(--accent-blue)"></i> <strong>Aktor & RBAC
+                (Role-Based
+                Access Control):</strong>
               Admin Sistem (Kelola User, Master Bahan, Transaksi & Laporan), Staff Operasional (Input Masuk/Keluar &
               Lihat Transaksi), Owner Restoran (Monitoring Laporan, Unduh PDF & Instruksi Pengadaan).
             </div>
@@ -607,7 +771,7 @@
           <div class="info-card highlight-emerald" style="overflow-y:auto; max-height:72vh;">
             <div class="card-title" style="margin-bottom:10px;">
               <i class="fa-solid fa-list-check" style="color: var(--accent-emerald)"></i>
-              Spesifikasi Fungsional & Relasi Use Case
+              Spesifikasi Fungsional & Relasi Use Case Sistem Usulan
             </div>
             <table class="data-table" style="font-size:0.76rem;">
               <thead>
@@ -687,103 +851,6 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">07</span>
-            <div class="fsf-line"></div>
-          </div>
-          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
-        </div>
-      </section>
-
-      <!-- SLIDE 8: RANCANGAN UML 2 - ACTIVITY DIAGRAM -->
-      <section class="slide" data-slide="8">
-        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-header">
-          <div class="fsh-left">
-            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
-            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
-          </div>
-          <div class="fsh-right">
-            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
-            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
-          </div>
-        </div>
-        <div class="slide-header">
-          <div>
-            <div class="slide-category">Bab IV • Rancangan Sistem (UML 2)</div>
-            <h2 class="slide-title">Activity Diagram Alur Transaksi & Evaluasi Stok Min-Max</h2>
-          </div>
-          <span class="slide-number-badge">Slide 8 / 15</span>
-        </div>
-        <div class="slide-body grid-2">
-          <!-- Kiri: Alur Activity Diagram -->
-          <div class="info-card highlight-orange">
-            <div class="card-title"><i class="fa-solid fa-diagram-next" style="color: var(--accent-orange)"></i>
-              Flowchart Activity Transaksi Barang Masuk & Keluar</div>
-            <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-              <div
-                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-blue); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
-                <strong>1. Mulai & Pilih Menu:</strong> Aktor memilih jenis transaksi (Barang Masuk atau Barang Keluar)
-                dan memilih SKU bahan baku.
-              </div>
-              <div
-                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-emerald); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
-                <strong>2. Validasi Ketersediaan (Decision):</strong> Jika Transaksi Keluar, sistem mengecek apakah
-                <code>Qty Keluar &le; Stok Aktual</code>. Jika tidak cukup, sistem menolak transaksi.
-              </div>
-              <div
-                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-orange); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
-                <strong>3. Pembaruan Akumulasi Stok:</strong> Sistem menyimpan catatan mutasi dan memperbarui kolom
-                <code>current_stock</code> pada tabel utama <code>materials</code>.
-              </div>
-              <div
-                style="background:rgba(255,255,255,0.04); border-left:3px solid var(--accent-red); padding:8px 12px; border-radius:4px; font-size:0.8rem;">
-                <strong>4. Evaluasi Batas Min-Max (Decision):</strong> Jika <code>Stok Akhir &le; min_stock</code>,
-                sistem mengaktifkan status <strong>KRITIS</strong> dan memunculkan peringatan Re-order.
-              </div>
-            </div>
-          </div>
-
-          <!-- Kanan: Visual Swimlane Aktor vs Sistem -->
-          <div class="info-card highlight-blue">
-            <div class="card-title"><i class="fa-solid fa-water" style="color: var(--accent-blue)"></i> Pembagian Jalur
-              Aktivitas (Swimlane)</div>
-            <table class="data-table" style="font-size:0.8rem;">
-              <thead>
-                <tr>
-                  <th>Jalur Aktor (User)</th>
-                  <th>Jalur Sistem SIMP Lazatto</th>
-                  <th>Jalur Database MySQL</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Input formulir mutasi stok bahan baku</td>
-                  <td>Memeriksa kelengkapan & validitas form</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Konfirmasi simpan transaksi</td>
-                  <td>Menghitung stok baru (<code>+</code> atau <code>-</code>)</td>
-                  <td><code>BEGIN TRANSACTION</code></td>
-                </tr>
-                <tr>
-                  <td>-</td>
-                  <td>Mengevaluasi parameter Min-Max</td>
-                  <td><code>UPDATE materials</code> & <code>INSERT mutations</code></td>
-                </tr>
-                <tr>
-                  <td>Menerima notifikasi status & resi</td>
-                  <td>Menampilkan pembaruan grafik real-time</td>
-                  <td><code>COMMIT TRANSACTION</code></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-footer">
-          <div class="fsf-top-row">
             <span class="fsf-number">08</span>
             <div class="fsf-line"></div>
           </div>
@@ -791,7 +858,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 9: RANCANGAN UML 3 - SEQUENCE & CLASS DIAGRAM -->
+      <!-- SLIDE 9: RANCANGAN UML - SEQUENCE & CLASS DIAGRAM -->
       <section class="slide" data-slide="9">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
@@ -806,10 +873,10 @@
         </div>
         <div class="slide-header">
           <div>
-            <div class="slide-category">Bab IV • Rancangan Sistem (UML 3)</div>
+            <div class="slide-category">Bab IV • Rancangan Sistem Usulan (UML 2)</div>
             <h2 class="slide-title">Sequence Diagram & Class Diagram Arsitektur SIMP</h2>
           </div>
-          <span class="slide-number-badge">Slide 9 / 15</span>
+          <span class="slide-number-badge">Slide 9 / 14</span>
         </div>
         <div class="slide-body grid-2">
           <!-- Kiri: Gambar Diagram Asli Class Diagram -->
@@ -835,7 +902,8 @@
               persediaan metode Min-Max:
               <ul
                 style="margin:4px 0 0 16px; padding:0; display:flex; flex-direction:column; gap:3px; color:var(--text-muted);">
-                <li><strong>User &amp; Material:</strong> Pusat autentikasi &amp; otorisasi pengguna Role-Based Access Control (RBAC), serta
+                <li><strong>User &amp; Material:</strong> Pusat autentikasi &amp; otorisasi pengguna Role-Based Access
+                  Control (RBAC), serta
                   entitas master bahan baku penyimpan parameter batas <code>min_stock</code>, <code>max_stock</code>,
                   dan evaluasi otomatis <code>total_stock</code>.</li>
                 <li><strong>StockEntry &amp; StockExit:</strong> Kelas transaksional pencatat arus barang masuk &amp;
@@ -845,7 +913,7 @@
             </div>
           </div>
 
-          <!-- Kanan: Penjelasan Detail 4 Class Sesuai Gambar -->
+          <!-- Kanan: Spesifikasi Detail 4 Class Sesuai Gambar -->
           <div class="info-card highlight-emerald" style="overflow-y:auto; max-height:72vh;">
             <div class="card-title" style="margin-bottom:10px;">
               <i class="fa-solid fa-list-check" style="color: var(--accent-emerald)"></i>
@@ -865,7 +933,9 @@
                   <td><strong>User</strong></td>
                   <td><code>id</code>, <code>name</code>, <code>email</code>, <code>role</code> ('admin', 'staff',
                     'owner'), <code>password</code></td>
-                  <td><code>+login()</code><br><code>+logout()</code><br><code>+stockEntries()</code>+stockExits()</code></td>
+                  <td>
+                    <code>+login()</code><br><code>+logout()</code><br><code>+stockEntries()</code><br><code>+stockExits()</code>
+                  </td>
                   <td><strong>1 .. 1..*</strong> ke Entries & Exits</td>
                 </tr>
                 <tr>
@@ -909,7 +979,7 @@
         </div>
       </section>
 
-      <!-- SLIDE 10: DESAIN BASIS DATA (NORMALISASI 3NF & RELASI) -->
+      <!-- SLIDE 10: STRUKTUR MENU & BLUEPRINT WIREFRAME PROGRAM (SIMP LSW) -->
       <section class="slide" data-slide="10">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
@@ -924,350 +994,33 @@
         </div>
         <div class="slide-header">
           <div>
-            <div class="slide-category">Bab IV • Rancangan Basis Data</div>
-            <h2 class="slide-title">Desain Basis Data Relasional (Normalisasi 3NF)</h2>
-          </div>
-          <span class="slide-number-badge">Slide 10 / 15</span>
-        </div>
-        <div class="slide-body grid-2">
-          <!-- Kiri: Tahap Tidak Normal (UNF) & Normal 1 (1NF) -->
-          <div class="info-card highlight-blue"
-            style="overflow-y:auto; max-height:72vh; display:flex; flex-direction:column; gap:12px;">
-            <div>
-              <div class="card-title" style="margin-bottom:6px;">
-                <i class="fa-solid fa-file-invoice" style="color: var(--accent-blue)"></i>
-                a) Tahap Tidak Normal (UNF - Unnormalized Form)
-              </div>
-              <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.4; margin-bottom:6px;">
-                Data bersumber dari dokumen mentah (bon/faktur). Masih terdapat duplikasi, pengulangan (multivalue),
-                atau atribut gabungan dalam satu kolom.
-              </p>
-              <div style="font-weight:700; font-size:0.7rem; color:var(--accent-blue); margin-bottom:4px;">Tabel 4.2
-                Spesifikasi Tidak Normal</div>
-              <table class="data-table" style="font-size:0.7rem;">
-                <thead>
-                  <tr>
-                    <th>no_dokumen</th>
-                    <th>pengguna_sistem</th>
-                    <th>data_barang</th>
-                    <th>qty_transaksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>OLN20260510</td>
-                    <td>1.Ahmad Hapendi (Admin)</td>
-                    <td>MYC-14 Mayonaise Curah (Kg)</td>
-                    <td>Masuk: 40</td>
-                  </tr>
-                  <tr>
-                    <td>OUT20260511</td>
-                    <td>2.Ibadurrahman (Staff)</td>
-                    <td>STE-13 - S-tee (Pcs)</td>
-                    <td>Keluar: 58</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div style="border-top:1px dashed var(--border-color); padding-top:10px;">
-              <div class="card-title" style="margin-bottom:6px;">
-                <i class="fa-solid fa-table-cells" style="color: var(--accent-blue)"></i>
-                b) Tahap Normal 1 (1NF - First Normal Form)
-              </div>
-              <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.4; margin-bottom:6px;">
-                Memecah atribut gabungan agar setiap kolom bernilai 1 nilai tunggal (<strong>atomic</strong>) dan tidak
-                ada kolom multivalue berulang.
-              </p>
-              <div style="font-weight:700; font-size:0.7rem; color:var(--accent-blue); margin-bottom:4px;">Tabel 4.3
-                Spesifikasi Normal 1</div>
-              <div style="overflow-x:auto;">
-                <table class="data-table" style="font-size:0.67rem;">
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>id_user</th>
-                      <th>nama_user</th>
-                      <th>role</th>
-                      <th>sku</th>
-                      <th>nama_barang</th>
-                      <th>satuan</th>
-                      <th>tipe</th>
-                      <th>qty</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>Ahmad Hapendi</td>
-                      <td>Admin</td>
-                      <td>MYC-14</td>
-                      <td>Mayonaise curah</td>
-                      <td>kg</td>
-                      <td>Masuk</td>
-                      <td>40</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>2</td>
-                      <td>Ibadurrahman</td>
-                      <td>staff</td>
-                      <td>STE-13</td>
-                      <td>S-tee</td>
-                      <td>Pcs</td>
-                      <td>Keluar</td>
-                      <td>58</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kanan: Tahap Normal 2 (2NF) & Normal 3 (3NF Final) -->
-          <div class="info-card highlight-emerald"
-            style="overflow-y:auto; max-height:72vh; display:flex; flex-direction:column; gap:12px;">
-            <div>
-              <div class="card-title" style="margin-bottom:6px;">
-                <i class="fa-solid fa-database" style="color: var(--accent-emerald)"></i>
-                c) Tahap Normal 2 (2NF) - Pemisahan Data Master
-              </div>
-              <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.4; margin-bottom:6px;">
-                Semua atribut non-kunci bergantung penuh pada <em>Primary Key (PK)</em>. Data pengguna dipisah ke tabel
-                <code>User</code> dan barang ke tabel <code>Material</code>.
-              </p>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-                <div>
-                  <div style="font-weight:700; font-size:0.68rem; color:var(--accent-emerald); margin-bottom:3px;">Tabel
-                    4.4 Data Master Users</div>
-                  <table class="data-table" style="font-size:0.67rem;">
-                    <thead>
-                      <tr>
-                        <th>id (PK)</th>
-                        <th>nama</th>
-                        <th>role</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Ahmad hapendi</td>
-                        <td>Admin</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Ibadurrahman</td>
-                        <td>staff</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <div style="font-weight:700; font-size:0.68rem; color:var(--accent-emerald); margin-bottom:3px;">Tabel
-                    4.5 Data Master Materials</div>
-                  <table class="data-table" style="font-size:0.67rem;">
-                    <thead>
-                      <tr>
-                        <th>id (PK)</th>
-                        <th>sku</th>
-                        <th>name</th>
-                        <th>unit</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>MYC-14</td>
-                        <td>Mayonaise Curah</td>
-                        <td>kg</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>STE-13</td>
-                        <td>S-tee</td>
-                        <td>Pcs</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div style="border-top:1px dashed var(--border-color); padding-top:10px;">
-              <div class="card-title" style="margin-bottom:6px;">
-                <i class="fa-solid fa-check-double" style="color: var(--accent-emerald)"></i>
-                d) Tahap Normal 3 (3NF) - Skema Final Transaksional
-              </div>
-              <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.4; margin-bottom:6px;">
-                Menghilangkan ketergantungan transitif. Transaksi dipisah tegas ke tabel <code>stock_entries</code>
-                &amp; <code>stock_exits</code> dengan <em>Foreign Key (FK)</em> terintegrasi.
-              </p>
-
-              <div style="font-weight:700; font-size:0.68rem; color:var(--accent-emerald); margin-bottom:3px;">Tabel 4.6
-                Stock Entries (Barang Masuk)</div>
-              <table class="data-table" style="font-size:0.67rem; margin-bottom:8px;">
-                <thead>
-                  <tr>
-                    <th>id (PK)</th>
-                    <th>no_dokumen</th>
-                    <th>user_id (FK)</th>
-                    <th>material_id (FK)</th>
-                    <th>initial_qty</th>
-                    <th>created_at</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>OLN20260510</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>40</td>
-                    <td>2026-05-10</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div style="font-weight:700; font-size:0.68rem; color:var(--accent-orange); margin-bottom:3px;">Tabel 4.7
-                Stock Exits (Barang Keluar)</div>
-              <table class="data-table" style="font-size:0.67rem;">
-                <thead>
-                  <tr>
-                    <th>id (PK)</th>
-                    <th>no_dokumen</th>
-                    <th>user_id (FK)</th>
-                    <th>material_id (FK)</th>
-                    <th>quantity</th>
-                    <th>created_at</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>OUT20260511</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>58</td>
-                    <td>2026-05-11</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-footer">
-          <div class="fsf-top-row">
-            <span class="fsf-number">10</span>
-            <div class="fsf-line"></div>
-          </div>
-          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
-        </div>
-      </section>
-
-      <!-- SLIDE 11: ALGORITMA INTI & REKONSILIASI STOK DINAMIS -->
-      <section class="slide" data-slide="11">
-        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-header">
-          <div class="fsh-left">
-            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
-            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
-          </div>
-          <div class="fsh-right">
-            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
-            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
-          </div>
-        </div>
-        <div class="slide-header">
-          <div>
-            <div class="slide-category">Bab IV • Implementasi Sistem</div>
-            <h2 class="slide-title">Logika Inti Transaksi & Rekonsiliasi Stok Dinamis</h2>
-          </div>
-          <span class="slide-number-badge">Slide 11 / 15</span>
-        </div>
-        <div class="slide-body grid-2">
-          <div class="info-card highlight-orange">
-            <div class="card-title"><i class="fa-solid fa-code" style="color: var(--accent-orange)"></i> Algoritma
-              Mutasi Stok Otomatis</div>
-            <p class="card-text">
-              Setiap kali transaksi dilakukan, sistem mengeksekusi transaksi database atomik untuk memperbarui angka
-              stok:
-            </p>
-            <div
-              style="background: rgba(0,0,0,0.35); padding: 14px; border-radius: var(--radius-sm); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: #38bdf8; line-height: 1.6;">
-              // Transaksi Barang Masuk<br>
-              total_stock = total_stock + qty_masuk;<br><br>
-              // Transaksi Barang Keluar (Validasi Stok)<br>
-              IF (total_stock >= qty_keluar) {<br>
-              &nbsp;&nbsp;total_stock = total_stock - qty_keluar;<br>
-              } ELSE { THROW ERROR "Stok tidak mencukupi!"; }
-            </div>
-          </div>
-          <div class="info-card highlight-emerald">
-            <div class="card-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-emerald)"></i>
-              Fitur Unggulan: Rekonsiliasi Stok Dinamis</div>
-            <p class="card-text">
-              Perbedaan utama SIMP Lazatto dibanding sistem terdahulu adalah adanya kemampuan <strong>Rekonsiliasi Stok
-                Dinamis</strong>:
-            </p>
-            <ul class="clean-list">
-              <li>Apabila Admin melakukan <strong>Edit</strong> atau <strong>Hapus</strong> pada riwayat transaksi lama,
-                sistem otomatis menghitung selisih kuantitas dan merekonsiliasi nilai <code>total_stock</code> di
-                database.</li>
-              <li>Menjamin stok persediaan selalu presisi 100% dan kebal terhadap kesalahan ketik manusia (<em>human
-                  error</em>).</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-footer">
-          <div class="fsf-top-row">
-            <span class="fsf-number">11</span>
-            <div class="fsf-line"></div>
-          </div>
-          <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
-        </div>
-      </section>
-
-      <!-- SLIDE 12: IMPLEMENTASI UI/UX SIMP LSW -->
-      <section class="slide" data-slide="12">
-        <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
-        <div class="fullscreen-slide-header">
-          <div class="fsh-left">
-            <img src="logokampus.png" alt="UNBAJA" class="fsh-logo-unbaja">
-            <span class="fsh-univ-text">UNIVERSITAS BANTEN JAYA 2026</span>
-          </div>
-          <div class="fsh-right">
-            <span class="fsh-prodi-text">TEKNIK INFORMATIKA</span>
-            <img src="Logofilkom.png" alt="FIKOM" class="fsh-logo-fikom">
-          </div>
-        </div>
-        <div class="slide-header">
-          <div>
             <div class="slide-category">Bab IV • Rancangan Antarmuka &amp; Struktur Menu</div>
-            <h2 class="slide-title">Struktur Menu &amp; Rancangan Tampilan Program (SIMP LSW)</h2>
+            <h2 class="slide-title">Struktur Menu &amp; Blueprint Wireframe Program (SIMP LSW)</h2>
           </div>
-          <span class="slide-number-badge">Slide 12 / 15</span>
+          <span class="slide-number-badge">Slide 10 / 14</span>
         </div>
         <div class="slide-body">
           <div class="mockup-container">
             <div class="mockup-tabs">
-              <div class="mockup-tab active" data-mockup="struktur"><i class="fa-solid fa-sitemap"></i> Struktur Pohon Menu (Menu Hierarchy)</div>
-              <div class="mockup-tab" data-mockup="wireframe"><i class="fa-solid fa-file-invoice"></i> Rancangan Layout Wireframe Blueprint</div>
-              <div class="mockup-tab" data-mockup="spesifikasi"><i class="fa-solid fa-list-check"></i> Spesifikasi Form Input &amp; Validasi</div>
+              <div class="mockup-tab active" data-mockup="struktur"><i class="fa-solid fa-folder-tree"></i> Struktur
+                Pohon Menu</div>
+              <div class="mockup-tab" data-mockup="wireframe"><i class="fa-solid fa-desktop"></i> Blueprint Tata Letak
+                Wireframe</div>
+              <div class="mockup-tab" data-mockup="spesifikasi"><i class="fa-solid fa-list-check"></i> Spesifikasi Form
+                Input &amp; Validasi</div>
             </div>
 
             <!-- TAB 1: STRUKTUR POHON MENU UTAMA BERDASARKAN HAK AKSES AKTOR -->
             <div class="mockup-screen active" id="mockup-struktur" style="overflow-y:auto; max-height:68vh;">
-              <div style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); padding: 10px 16px; border-radius: 10px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
+              <div
+                style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); padding: 10px 16px; border-radius: 10px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                   <i class="fa-solid fa-folder-tree" style="font-size: 1.3rem; color: var(--accent-blue);"></i>
                   <div>
-                    <div style="font-weight: 800; font-size: 0.92rem; color: var(--text-main);">Struktur Pohon Menu Sistem (SIMP-LSW)</div>
-                    <div style="font-size: 0.76rem; color: var(--text-muted);">Bagan alur navigasi menu program dan pembagian hak akses berdasarkan role aktor</div>
+                    <div style="font-weight: 800; font-size: 0.92rem; color: var(--text-main);">Struktur Pohon Menu
+                      Sistem (SIMP-LSW)</div>
+                    <div style="font-size: 0.76rem; color: var(--text-muted);">Bagan alur navigasi menu program dan
+                      pembagian hak akses berdasarkan role aktor</div>
                   </div>
                 </div>
                 <span class="badge badge-info">3 ROLE AKSES</span>
@@ -1275,44 +1028,63 @@
 
               <div class="struktur-img-grid">
                 <!-- Kolom Kiri: Gambar Struktur Pohon Menu -->
-                <div style="background: #ffffff; border-radius: 12px; padding: 12px; border: 1px solid var(--border-color); box-shadow: 0 6px 18px rgba(0,0,0,0.12); display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                  <img src="struktur_menu.png" alt="Struktur Pohon Menu SIMP LSW" style="width: 100%; height: auto; max-height: 52vh; object-fit: contain; border-radius: 6px;">
-                  <span style="font-size: 0.7rem; color: #64748b; font-weight: 600;"><i class="fa-solid fa-magnifying-glass-chart" style="color: #3b82f6;"></i> Bagan Struktur Pohon Menu Program SIMP Lazatto Stasiun Walantaka</span>
+                <div
+                  style="background: #ffffff; border-radius: 12px; padding: 12px; border: 1px solid var(--border-color); box-shadow: 0 6px 18px rgba(0,0,0,0.12); display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                  <img src="struktur_menu.png" alt="Struktur Pohon Menu SIMP LSW"
+                    style="width: 100%; height: auto; max-height: 52vh; object-fit: contain; border-radius: 6px;">
+                  <span style="font-size: 0.7rem; color: #64748b; font-weight: 600;"><i
+                      class="fa-solid fa-magnifying-glass-chart" style="color: #3b82f6;"></i> Bagan Struktur Pohon Menu
+                    Program SIMP Lazatto Stasiun Walantaka</span>
                 </div>
 
                 <!-- Kolom Kanan: Penjelasan Struktur Menu & Hak Akses -->
                 <div class="struktur-explanation-card">
-                  <div style="font-size: 0.88rem; font-weight: 800; color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-circle-info" style="color: var(--accent-blue);"></i> Penjelasan Hak Akses &amp; Alur Menu
+                  <div
+                    style="font-size: 0.88rem; font-weight: 800; color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-circle-info" style="color: var(--accent-blue);"></i> Penjelasan Hak Akses
+                    &amp; Alur Menu
                   </div>
 
                   <!-- 1. Menu Admin -->
                   <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem;">
-                    <div style="font-weight: 800; color: var(--accent-blue); display: flex; align-items: center; gap: 6px;">
+                    <div
+                      style="font-weight: 800; color: var(--accent-blue); display: flex; align-items: center; gap: 6px;">
                       <i class="fa-solid fa-user-shield"></i> 1. Menu Admin (Akses Penuh)
                     </div>
                     <p style="color: var(--text-muted); line-height: 1.45; margin: 0;">
-                      Berfungsi sebagai pengelola utama sistem. Admin memiliki wewenang khusus pada <strong>Kelola User</strong> (tambah, edit, hapus, &amp; penentuan role user) serta <strong>Mengelola Data Bahan Baku</strong> (menentukan batas min &amp; max safety stock, tambah, edit, hapus data bahan baku). Selain itu, Admin dapat mengakses Menu Inventory, Riwayat Transaksi, dan Laporan Persediaan.
+                      Berfungsi sebagai pengelola utama sistem. Admin memiliki wewenang khusus pada <strong>Kelola
+                        User</strong> (tambah, edit, hapus, &amp; penentuan role user) serta <strong>Mengelola Data
+                        Bahan Baku</strong> (menentukan batas min &amp; max safety stock, tambah, edit, hapus data bahan
+                      baku). Selain itu, Admin dapat mengakses Menu Inventory, Riwayat Transaksi, dan Laporan
+                      Persediaan.
                     </p>
                   </div>
 
                   <!-- 2. Menu Staff -->
                   <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem;">
-                    <div style="font-weight: 800; color: var(--accent-emerald); display: flex; align-items: center; gap: 6px;">
+                    <div
+                      style="font-weight: 800; color: var(--accent-emerald); display: flex; align-items: center; gap: 6px;">
                       <i class="fa-solid fa-user-gear"></i> 2. Menu Staff (Operasional Harian)
                     </div>
                     <p style="color: var(--text-muted); line-height: 1.45; margin: 0;">
-                      Berfokus pada pencatatan aktivitas logistik dapur harian. Staff berhak mengoperasikan <strong>Menu Inventory</strong> untuk melakukan <strong>Input Bahan Baku Masuk</strong> dari supplier maupun <strong>Input Penggunaan Bahan Baku</strong> harian dapur, memantau <strong>Riwayat Transaksi</strong>, serta mengakses <strong>Laporan Persediaan</strong>.
+                      Berfokus pada pencatatan aktivitas logistik dapur harian. Staff berhak mengoperasikan <strong>Menu
+                        Inventory</strong> untuk melakukan <strong>Input Bahan Baku Masuk</strong> dari supplier maupun
+                      <strong>Input Penggunaan Bahan Baku</strong> harian dapur, memantau <strong>Riwayat
+                        Transaksi</strong>, serta mengakses <strong>Laporan Persediaan</strong>.
                     </p>
                   </div>
 
                   <!-- 3. Menu Owner -->
                   <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem;">
-                    <div style="font-weight: 800; color: var(--accent-orange); display: flex; align-items: center; gap: 6px;">
+                    <div
+                      style="font-weight: 800; color: var(--accent-orange); display: flex; align-items: center; gap: 6px;">
                       <i class="fa-solid fa-user-tie"></i> 3. Menu Owner (Pimpinan Eksekutif)
                     </div>
                     <p style="color: var(--text-muted); line-height: 1.45; margin: 0;">
-                      Didesain khusus untuk fungsi pengawasan eksekutif dan monitoring kinerja gudang tanpa hak mengubah data master. Owner dapat memantau <strong>Riwayat Transaksi (Bahan Baku Masuk &amp; Keluar)</strong> serta melihat dan mengunduh <strong>Laporan Persediaan</strong> untuk mendukung pengambilan keputusan strategis.
+                      Didesain khusus untuk fungsi pengawasan eksekutif dan monitoring kinerja gudang tanpa hak mengubah
+                      data master. Owner dapat memantau <strong>Riwayat Transaksi (Bahan Baku Masuk &amp;
+                        Keluar)</strong> serta melihat dan mengunduh <strong>Laporan Persediaan</strong> untuk mendukung
+                      pengambilan keputusan strategis.
                     </p>
                   </div>
                 </div>
@@ -1322,31 +1094,41 @@
             <!-- TAB 2: RANCANGAN LAYOUT WIREFRAME BLUEPRINT -->
             <div class="mockup-screen" id="mockup-wireframe" style="overflow-y:auto; max-height:68vh;">
               <div class="wireframe-blueprint-box">
-                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:8px;">
+                <div
+                  style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:8px;">
                   <div>
-                    <span style="font-weight:800; font-size:0.9rem; color:var(--text-main);"><i class="fa-solid fa-ruler-combined" style="color:var(--accent-blue);"></i> Blueprint Rancangan UI Semirip Aplikasi Jadi (SIMP-LSW Stasiun Walantaka)</span>
-                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Rancangan struktural wireframe 1:1 yang menjadi patokan/blueprint dari tampilan program jadi sistem persediaan</div>
+                    <span style="font-weight:800; font-size:0.9rem; color:var(--text-main);"><i
+                        class="fa-solid fa-ruler-combined" style="color:var(--accent-blue);"></i> Blueprint Rancangan UI
+                      Semirip Aplikasi Jadi (SIMP-LSW Stasiun Walantaka)</span>
+                    <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">Rancangan struktural
+                      wireframe 1:1 yang menjadi patokan/blueprint dari tampilan program jadi sistem persediaan</div>
                   </div>
                   <span class="badge badge-warning">WIREFRAME BLUEPRINT 1:1</span>
                 </div>
 
                 <!-- BLUEPRINT APP GRID: SIDEBAR (KIRI) & MAIN WORKSPACE (KANAN) -->
                 <div class="blueprint-app-grid">
-                  
+
                   <!-- 1. BLUEPRINT SIDEBAR PANEL (KIRI) -->
                   <div class="blueprint-sidebar">
                     <!-- Logo & Brand Blueprint -->
                     <div class="blueprint-sidebar-section" style="align-items:center; text-align:center;">
-                      <div style="background:#ffffff; color:#dc2626; padding:4px 10px; border-radius:6px; font-weight:800; font-size:0.75rem;">[ LOGO LAZATTO ]</div>
+                      <div
+                        style="background:#ffffff; color:#dc2626; padding:4px 10px; border-radius:6px; font-weight:800; font-size:0.75rem;">
+                        [ LOGO LAZATTO ]</div>
                       <strong style="color:var(--text-main); font-size:0.82rem;">SIMP LSW.</strong>
                       <span style="font-size:0.68rem; color:var(--text-muted);">System v1.0</span>
-                      <div style="background:rgba(250,204,21,0.2); border:1px solid #facc15; color:#facc15; padding:2px 8px; border-radius:12px; font-weight:800; font-size:0.68rem; margin-top:4px;"><i class="fa-solid fa-crown"></i> ADMIN</div>
+                      <div
+                        style="background:rgba(250,204,21,0.2); border:1px solid #facc15; color:#facc15; padding:2px 8px; border-radius:12px; font-weight:800; font-size:0.68rem; margin-top:4px;">
+                        <i class="fa-solid fa-crown"></i> ADMIN
+                      </div>
                     </div>
 
                     <!-- Main Menu Section -->
                     <div class="blueprint-sidebar-section">
                       <strong style="color:#f8fafc; font-size:0.68rem; letter-spacing:0.5px;">MAIN MENU</strong>
-                      <div style="background:rgba(255,255,255,0.15); border:1px solid #ffffff; padding:6px 8px; border-radius:6px; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:6px;">
+                      <div
+                        style="background:rgba(255,255,255,0.15); border:1px solid #ffffff; padding:6px 8px; border-radius:6px; font-weight:800; color:#ffffff; display:flex; align-items:center; gap:6px;">
                         <i class="fa-solid fa-chart-pie"></i> Dashboard (Aktif)
                       </div>
                       <span style="padding:4px 8px; color:var(--text-muted);">• Kelola User</span>
@@ -1355,7 +1137,8 @@
 
                     <!-- Inventory Transaction Section -->
                     <div class="blueprint-sidebar-section">
-                      <strong style="color:#f8fafc; font-size:0.68rem; letter-spacing:0.5px;">INVENTORY TRANSACTION</strong>
+                      <strong style="color:#f8fafc; font-size:0.68rem; letter-spacing:0.5px;">INVENTORY
+                        TRANSACTION</strong>
                       <span style="padding:4px 8px; color:var(--accent-emerald);">↓ Bahan Baku Masuk</span>
                       <span style="padding:4px 8px; color:#ef4444;">↑ Bahan Baku Keluar</span>
                     </div>
@@ -1368,26 +1151,33 @@
                     </div>
 
                     <!-- Info Sistem -->
-                    <div style="padding:6px 8px; background:rgba(0,0,0,0.2); border-radius:6px; color:var(--text-muted); display:flex; align-items:center; gap:6px; margin-top:auto;">
+                    <div
+                      style="padding:6px 8px; background:rgba(0,0,0,0.2); border-radius:6px; color:var(--text-muted); display:flex; align-items:center; gap:6px; margin-top:auto;">
                       <i class="fa-solid fa-circle-info"></i> Info Sistem
                     </div>
                   </div>
 
                   <!-- 2. BLUEPRINT MAIN WORKSPACE AREA (KANAN) -->
                   <div class="blueprint-main-area">
-                    
+
                     <!-- Top Navigation & Profile Bar Blueprint -->
                     <div class="blueprint-topbar">
                       <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="background:#ffffff; color:#dc2626; padding:3px 6px; border-radius:4px; font-weight:800; font-size:0.7rem;">[ LOGO ]</span>
+                        <span
+                          style="background:#ffffff; color:#dc2626; padding:3px 6px; border-radius:4px; font-weight:800; font-size:0.7rem;">[
+                          LOGO ]</span>
                         <strong style="color:var(--text-main);">SIMP-LSW STASIUN WALANTAKA</strong>
                       </div>
-                      <div style="display:flex; gap:8px; font-size:0.72rem; flex-wrap:wrap; background:rgba(0,0,0,0.22); padding:4px 10px; border-radius:6px; color:#f8fafc;">
-                        <span>Kelola User</span> | <span>Data Bahan baku</span> | <span>Bahan Baku Masuk</span> | <span>Bahan Baku Keluar</span> | <span>Transaksi</span> | <span>Laporan</span>
+                      <div
+                        style="display:flex; gap:8px; font-size:0.72rem; flex-wrap:wrap; background:rgba(0,0,0,0.22); padding:4px 10px; border-radius:6px; color:#f8fafc;">
+                        <span>Kelola User</span> | <span>Data Bahan baku</span> | <span>Bahan Baku Masuk</span> |
+                        <span>Bahan Baku Keluar</span> | <span>Transaksi</span> | <span>Laporan</span>
                       </div>
                       <div style="display:flex; align-items:center; gap:6px; font-size:0.74rem;">
-                        <span style="text-align:right;"><strong>Ahmad Hapendi</strong><br><small style="color:#facc15;">Administrator</small></span>
-                        <span style="background:#ffffff; color:#dc2626; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.7rem;">AH</span>
+                        <span style="text-align:right;"><strong>Ahmad Hapendi</strong><br><small
+                            style="color:#facc15;">Administrator</small></span>
+                        <span
+                          style="background:#ffffff; color:#dc2626; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.7rem;">AH</span>
                       </div>
                     </div>
 
@@ -1395,58 +1185,152 @@
                     <div class="blueprint-dashboard-grid">
                       <!-- Panel Kiri: Blueprint Grafik Kapasitas Stok -->
                       <div class="blueprint-card">
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--border-color); padding-bottom:6px;">
-                          <strong style="font-size:0.8rem; color:var(--text-main);"><i class="fa-solid fa-chart-column" style="color:var(--accent-blue);"></i> Kapasitas Stok (Aktual vs Min vs Max)</strong>
+                        <div
+                          style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--border-color); padding-bottom:6px;">
+                          <strong style="font-size:0.8rem; color:var(--text-main);"><i class="fa-solid fa-chart-column"
+                              style="color:var(--accent-blue);"></i> Kapasitas Stok (Aktual vs Min vs Max)</strong>
                           <span class="badge badge-info" style="font-size:0.65rem;">GRID KOLOM KIRI (68%)</span>
                         </div>
-                        
+
                         <!-- Simulasi Struktur Visual Grafik (Exact 1:1 SVG Combo Chart) -->
-                        <div style="background:rgba(255,255,255,0.03); border:1px dashed var(--border-color); border-radius:6px; padding:10px 6px 4px 6px; position:relative; overflow:hidden;">
+                        <div
+                          style="background:rgba(255,255,255,0.03); border:1px dashed var(--border-color); border-radius:6px; padding:10px 6px 4px 6px; position:relative; overflow:hidden;">
                           <svg viewBox="0 0 680 230" style="width:100%; height:auto; display:block;">
                             <!-- Horizontal Grid Lines & Y-Axis Labels -->
                             <g font-size="8" fill="var(--text-muted)" font-family="sans-serif">
-                              <text x="5" y="23">60</text><line x1="22" y1="20" x2="675" y2="20" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="5" y="48">50</text><line x1="22" y1="45" x2="675" y2="45" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="5" y="73">40</text><line x1="22" y1="70" x2="675" y2="70" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="5" y="98">30</text><line x1="22" y1="95" x2="675" y2="95" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="5" y="123">20</text><line x1="22" y1="120" x2="675" y2="120" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="5" y="148">10</text><line x1="22" y1="145" x2="675" y2="145" stroke="rgba(255,255,255,0.12)" stroke-dasharray="3,3"/>
-                              <text x="8" y="173">0</text><line x1="22" y1="170" x2="675" y2="170" stroke="rgba(255,255,255,0.22)"/>
+                              <text x="5" y="23">60</text>
+                              <line x1="22" y1="20" x2="675" y2="20" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="5" y="48">50</text>
+                              <line x1="22" y1="45" x2="675" y2="45" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="5" y="73">40</text>
+                              <line x1="22" y1="70" x2="675" y2="70" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="5" y="98">30</text>
+                              <line x1="22" y1="95" x2="675" y2="95" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="5" y="123">20</text>
+                              <line x1="22" y1="120" x2="675" y2="120" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="5" y="148">10</text>
+                              <line x1="22" y1="145" x2="675" y2="145" stroke="rgba(255,255,255,0.12)"
+                                stroke-dasharray="3,3" />
+                              <text x="8" y="173">0</text>
+                              <line x1="22" y1="170" x2="675" y2="170" stroke="rgba(255,255,255,0.22)" />
                             </g>
 
                             <!-- 19 Blue Bars (Stok Aktual Fisik) -->
                             <g fill="#3b82f6">
-                              <rect x="34" y="107.5" width="16" height="62.5" rx="1.5"><title>Ayam Original: 25</title></rect>
-                              <rect x="68" y="45" width="16" height="125" rx="1.5"><title>Tepung: 50</title></rect>
-                              <rect x="102" y="67.5" width="16" height="102.5" rx="1.5"><title>Roti Besar: 41</title></rect>
-                              <rect x="136" y="70" width="16" height="100" rx="1.5"><title>Roti Kecil: 40</title></rect>
-                              <rect x="170" y="70" width="16" height="100" rx="1.5"><title>Daging Besar: 40</title></rect>
-                              <rect x="204" y="120" width="16" height="50" rx="1.5"><title>Daging Kecil: 20</title></rect>
-                              <rect x="238" y="115" width="16" height="55" rx="1.5"><title>Keju Slice: 22</title></rect>
-                              <rect x="272" y="95" width="16" height="75" rx="1.5"><title>Kentang French Fries: 30</title></rect>
-                              <rect x="306" y="120" width="16" height="50" rx="1.5"><title>Beras: 20</title></rect>
-                              <rect x="340" y="75" width="16" height="95" rx="1.5"><title>Air Mineral: 38</title></rect>
-                              <rect x="374" y="45" width="16" height="125" rx="1.5"><title>Teh Botol Kotak: 50</title></rect>
-                              <rect x="408" y="95" width="16" height="75" rx="1.5"><title>Spaghetti: 30</title></rect>
-                              <rect x="442" y="25" width="16" height="145" rx="1.5"><title>S-tee: 58</title></rect>
-                              <rect x="476" y="57.5" width="16" height="112.5" rx="1.5"><title>Mayonnaise Curah: 45</title></rect>
-                              <rect x="510" y="120" width="16" height="50" rx="1.5"><title>Saos Tomat Curah: 20</title></rect>
-                              <rect x="544" y="145" width="16" height="25" rx="1.5"><title>Saos Sadas Level 1: 10</title></rect>
-                              <rect x="578" y="120" width="16" height="50" rx="1.5"><title>Saos Sadas Level 2: 20</title></rect>
-                              <rect x="612" y="145" width="16" height="25" rx="1.5"><title>Saos Sadas Level 3: 10</title></rect>
-                              <rect x="646" y="95" width="16" height="75" rx="1.5"><title>Kulit Ayam: 30</title></rect>
+                              <rect x="34" y="107.5" width="16" height="62.5" rx="1.5">
+                                <title>Ayam Original: 25</title>
+                              </rect>
+                              <rect x="68" y="45" width="16" height="125" rx="1.5">
+                                <title>Tepung: 50</title>
+                              </rect>
+                              <rect x="102" y="67.5" width="16" height="102.5" rx="1.5">
+                                <title>Roti Besar: 41</title>
+                              </rect>
+                              <rect x="136" y="70" width="16" height="100" rx="1.5">
+                                <title>Roti Kecil: 40</title>
+                              </rect>
+                              <rect x="170" y="70" width="16" height="100" rx="1.5">
+                                <title>Daging Besar: 40</title>
+                              </rect>
+                              <rect x="204" y="120" width="16" height="50" rx="1.5">
+                                <title>Daging Kecil: 20</title>
+                              </rect>
+                              <rect x="238" y="115" width="16" height="55" rx="1.5">
+                                <title>Keju Slice: 22</title>
+                              </rect>
+                              <rect x="272" y="95" width="16" height="75" rx="1.5">
+                                <title>Kentang French Fries: 30</title>
+                              </rect>
+                              <rect x="306" y="120" width="16" height="50" rx="1.5">
+                                <title>Beras: 20</title>
+                              </rect>
+                              <rect x="340" y="75" width="16" height="95" rx="1.5">
+                                <title>Air Mineral: 38</title>
+                              </rect>
+                              <rect x="374" y="45" width="16" height="125" rx="1.5">
+                                <title>Teh Botol Kotak: 50</title>
+                              </rect>
+                              <rect x="408" y="95" width="16" height="75" rx="1.5">
+                                <title>Spaghetti: 30</title>
+                              </rect>
+                              <rect x="442" y="25" width="16" height="145" rx="1.5">
+                                <title>S-tee: 58</title>
+                              </rect>
+                              <rect x="476" y="57.5" width="16" height="112.5" rx="1.5">
+                                <title>Mayonnaise Curah: 45</title>
+                              </rect>
+                              <rect x="510" y="120" width="16" height="50" rx="1.5">
+                                <title>Saos Tomat Curah: 20</title>
+                              </rect>
+                              <rect x="544" y="145" width="16" height="25" rx="1.5">
+                                <title>Saos Sadas Level 1: 10</title>
+                              </rect>
+                              <rect x="578" y="120" width="16" height="50" rx="1.5">
+                                <title>Saos Sadas Level 2: 20</title>
+                              </rect>
+                              <rect x="612" y="145" width="16" height="25" rx="1.5">
+                                <title>Saos Sadas Level 3: 10</title>
+                              </rect>
+                              <rect x="646" y="95" width="16" height="75" rx="1.5">
+                                <title>Kulit Ayam: 30</title>
+                              </rect>
                             </g>
 
                             <!-- Green Dashed Line & Dots (Max Kapasitas) -->
-                            <polyline points="42,20 76,45 110,45 144,45 178,45 212,45 246,20 280,45 314,95 348,20 382,20 416,70 450,20 484,70 518,145 552,145 586,145 620,145 654,95" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+                            <polyline
+                              points="42,20 76,45 110,45 144,45 178,45 212,45 246,20 280,45 314,95 348,20 382,20 416,70 450,20 484,70 518,145 552,145 586,145 620,145 654,95"
+                              fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" />
                             <g fill="#10b981">
-                              <circle cx="42" cy="20" r="3"/><circle cx="76" cy="45" r="3"/><circle cx="110" cy="45" r="3"/><circle cx="144" cy="45" r="3"/><circle cx="178" cy="45" r="3"/><circle cx="212" cy="45" r="3"/><circle cx="246" cy="20" r="3"/><circle cx="280" cy="45" r="3"/><circle cx="314" cy="95" r="3"/><circle cx="348" cy="20" r="3"/><circle cx="382" cy="20" r="3"/><circle cx="416" cy="70" r="3"/><circle cx="450" cy="20" r="3"/><circle cx="484" cy="70" r="3"/><circle cx="518" cy="145" r="3"/><circle cx="552" cy="145" r="3"/><circle cx="586" cy="145" r="3"/><circle cx="620" cy="145" r="3"/><circle cx="654" cy="95" r="3"/>
+                              <circle cx="42" cy="20" r="3" />
+                              <circle cx="76" cy="45" r="3" />
+                              <circle cx="110" cy="45" r="3" />
+                              <circle cx="144" cy="45" r="3" />
+                              <circle cx="178" cy="45" r="3" />
+                              <circle cx="212" cy="45" r="3" />
+                              <circle cx="246" cy="20" r="3" />
+                              <circle cx="280" cy="45" r="3" />
+                              <circle cx="314" cy="95" r="3" />
+                              <circle cx="348" cy="20" r="3" />
+                              <circle cx="382" cy="20" r="3" />
+                              <circle cx="416" cy="70" r="3" />
+                              <circle cx="450" cy="20" r="3" />
+                              <circle cx="484" cy="70" r="3" />
+                              <circle cx="518" cy="145" r="3" />
+                              <circle cx="552" cy="145" r="3" />
+                              <circle cx="586" cy="145" r="3" />
+                              <circle cx="620" cy="145" r="3" />
+                              <circle cx="654" cy="95" r="3" />
                             </g>
 
                             <!-- Red Solid Line & Dots (Min Batas Aman Reorder) -->
-                            <polyline points="42,95 76,95 110,95 144,95 178,95 212,95 246,95 280,120 314,145 348,95 382,95 416,120 450,95 484,92.5 518,157.5 552,157.5 586,157.5 620,157.5 654,132.5" fill="none" stroke="#ef4444" stroke-width="2.2"/>
+                            <polyline
+                              points="42,95 76,95 110,95 144,95 178,95 212,95 246,95 280,120 314,145 348,95 382,95 416,120 450,95 484,92.5 518,157.5 552,157.5 586,157.5 620,157.5 654,132.5"
+                              fill="none" stroke="#ef4444" stroke-width="2.2" />
                             <g fill="#ef4444">
-                              <circle cx="42" cy="95" r="3"/><circle cx="76" cy="95" r="3"/><circle cx="110" cy="95" r="3"/><circle cx="144" cy="95" r="3"/><circle cx="178" cy="95" r="3"/><circle cx="212" cy="95" r="3"/><circle cx="246" cy="95" r="3"/><circle cx="280" cy="120" r="3"/><circle cx="314" cy="145" r="3"/><circle cx="348" cy="95" r="3"/><circle cx="382" cy="95" r="3"/><circle cx="416" cy="120" r="3"/><circle cx="450" cy="95" r="3"/><circle cx="484" cy="92.5" r="3"/><circle cx="518" cy="157.5" r="3"/><circle cx="552" cy="157.5" r="3"/><circle cx="586" cy="157.5" r="3"/><circle cx="620" cy="157.5" r="3"/><circle cx="654" cy="132.5" r="3"/>
+                              <circle cx="42" cy="95" r="3" />
+                              <circle cx="76" cy="95" r="3" />
+                              <circle cx="110" cy="95" r="3" />
+                              <circle cx="144" cy="95" r="3" />
+                              <circle cx="178" cy="95" r="3" />
+                              <circle cx="212" cy="95" r="3" />
+                              <circle cx="246" cy="95" r="3" />
+                              <circle cx="280" cy="120" r="3" />
+                              <circle cx="314" cy="145" r="3" />
+                              <circle cx="348" cy="95" r="3" />
+                              <circle cx="382" cy="95" r="3" />
+                              <circle cx="416" cy="120" r="3" />
+                              <circle cx="450" cy="95" r="3" />
+                              <circle cx="484" cy="92.5" r="3" />
+                              <circle cx="518" cy="157.5" r="3" />
+                              <circle cx="552" cy="157.5" r="3" />
+                              <circle cx="586" cy="157.5" r="3" />
+                              <circle cx="620" cy="157.5" r="3" />
+                              <circle cx="654" cy="132.5" r="3" />
                             </g>
 
                             <!-- Rotated X-Axis Labels -->
@@ -1475,26 +1359,37 @@
                         </div>
 
                         <!-- Keterangan Legenda Grafik Blueprint -->
-                        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; font-size:0.68rem; margin-top:4px;">
-                          <div style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); padding:6px; border-radius:4px;">
+                        <div
+                          style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px; font-size:0.68rem; margin-top:4px;">
+                          <div
+                            style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); padding:6px; border-radius:4px;">
                             <strong style="color:#ef4444;">— RED LINE (Min)</strong>
-                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Batas minimum aman. Sinyal segera belanja (Reorder).</p>
+                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Batas minimum aman.
+                              Sinyal segera belanja (Reorder).</p>
                           </div>
-                          <div style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); padding:6px; border-radius:4px;">
+                          <div
+                            style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); padding:6px; border-radius:4px;">
                             <strong style="color:var(--accent-emerald);">-- GREEN DASH (Max)</strong>
-                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Batas kapasitas maksimal gudang. Hindari overstock.</p>
+                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Batas kapasitas
+                              maksimal gudang. Hindari overstock.</p>
                           </div>
-                          <div style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); padding:6px; border-radius:4px;">
+                          <div
+                            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.3); padding:6px; border-radius:4px;">
                             <strong style="color:var(--accent-blue);">■ BLUE BAR (Aktual)</strong>
-                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Jumlah stok fisik yang tersedia di gudang saat ini.</p>
+                            <p style="margin:2px 0 0; color:var(--text-muted); font-size:0.65rem;">Jumlah stok fisik
+                              yang tersedia di gudang saat ini.</p>
                           </div>
                         </div>
                       </div>
 
                       <!-- Panel Kanan: Blueprint Grafik Rasio Masuk vs Keluar -->
                       <div class="blueprint-card">
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--border-color); padding-bottom:6px;">
-                          <strong style="font-size:0.8rem; color:var(--text-main);"><i class="fa-solid fa-chart-pie" style="color:var(--accent-emerald);"></i> Rasio Masuk vs Keluar <i class="fa-solid fa-arrows-rotate" style="font-size:0.7rem; color:var(--accent-blue);"></i></strong>
+                        <div
+                          style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed var(--border-color); padding-bottom:6px;">
+                          <strong style="font-size:0.8rem; color:var(--text-main);"><i class="fa-solid fa-chart-pie"
+                              style="color:var(--accent-emerald);"></i> Rasio Masuk vs Keluar <i
+                              class="fa-solid fa-arrows-rotate"
+                              style="font-size:0.7rem; color:var(--accent-blue);"></i></strong>
                           <span class="badge badge-warning" style="font-size:0.65rem;">GRID KOLOM KANAN (32%)</span>
                         </div>
 
@@ -1502,46 +1397,76 @@
                         <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:10px 0;">
                           <svg viewBox="0 0 160 160" style="width:135px; height:135px; display:block;">
                             <!-- Hijau Sector (Total Masuk ~66%) -->
-                            <path d="M 80 15 A 65 65 0 1 1 23 112 L 40 101 A 45 45 0 1 0 80 35 Z" fill="#10b981" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"><title>Akumulasi Masuk: 66%</title></path>
+                            <path d="M 80 15 A 65 65 0 1 1 23 112 L 40 101 A 45 45 0 1 0 80 35 Z" fill="#10b981"
+                              stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+                              <title>Akumulasi Masuk: 66%</title>
+                            </path>
                             <!-- Merah Sector (Total Keluar ~34%) -->
-                            <path d="M 23 112 A 65 65 0 0 1 80 15 L 80 35 A 45 45 0 0 0 40 101 Z" fill="#ef4444" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"><title>Akumulasi Keluar: 34%</title></path>
+                            <path d="M 23 112 A 65 65 0 0 1 80 15 L 80 35 A 45 45 0 0 0 40 101 Z" fill="#ef4444"
+                              stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+                              <title>Akumulasi Keluar: 34%</title>
+                            </path>
                             <!-- Center Text -->
-                            <text x="80" y="76" text-anchor="middle" font-size="9" font-weight="800" fill="var(--text-main)" font-family="sans-serif">RASIO</text>
-                            <text x="80" y="88" text-anchor="middle" font-size="8" font-weight="700" fill="var(--text-muted)" font-family="sans-serif">MASUK / KELUAR</text>
+                            <text x="80" y="76" text-anchor="middle" font-size="9" font-weight="800"
+                              fill="var(--text-main)" font-family="sans-serif">RASIO</text>
+                            <text x="80" y="88" text-anchor="middle" font-size="8" font-weight="700"
+                              fill="var(--text-muted)" font-family="sans-serif">MASUK / KELUAR</text>
                           </svg>
                         </div>
 
                         <!-- Legenda Live Data -->
-                        <div style="background:rgba(255,255,255,0.04); border:1px solid var(--border-color); padding:8px 10px; border-radius:6px; font-size:0.7rem;">
-                          <div style="margin-bottom:4px;"><span style="background:#ef4444; color:#ffffff; padding:1px 5px; border-radius:3px; font-weight:800; font-size:0.62rem;">LIVE DATA</span> <strong style="color:var(--text-main);">Petunjuk Warna:</strong></div>
-                          <ul style="margin:0; padding-left:14px; color:var(--text-muted); display:flex; flex-direction:column; gap:3px;">
-                            <li><strong style="color:var(--accent-emerald);">■ Hijau:</strong> Total akumulasi barang masuk.</li>
-                            <li><strong style="color:#ef4444;">■ Merah:</strong> Total akumulasi barang keluar/pakai.</li>
+                        <div
+                          style="background:rgba(255,255,255,0.04); border:1px solid var(--border-color); padding:8px 10px; border-radius:6px; font-size:0.7rem;">
+                          <div style="margin-bottom:4px;"><span
+                              style="background:#ef4444; color:#ffffff; padding:1px 5px; border-radius:3px; font-weight:800; font-size:0.62rem;">LIVE
+                              DATA</span> <strong style="color:var(--text-main);">Petunjuk Warna:</strong></div>
+                          <ul
+                            style="margin:0; padding-left:14px; color:var(--text-muted); display:flex; flex-direction:column; gap:3px;">
+                            <li><strong style="color:var(--accent-emerald);">■ Hijau:</strong> Total akumulasi barang
+                              masuk.</li>
+                            <li><strong style="color:#ef4444;">■ Merah:</strong> Total akumulasi barang keluar/pakai.
+                            </li>
                           </ul>
                         </div>
                       </div>
                     </div>
 
                     <!-- Blueprint Transisi Tata Letak Halaman Tabel & Transaksi (Saat Menu Sidebar Lain Dipilih) -->
-                    <div class="blueprint-card" style="border-color:var(--border-color); background:rgba(255,255,255,0.02);">
-                      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
-                        <strong style="font-size:0.78rem; color:var(--text-main);"><i class="fa-solid fa-table-list" style="color:var(--accent-orange);"></i> Blueprint Struktur Tata Letak Modul Master Data / Transaksi (Saat Menu Di Luar Dashboard Dipilih)</strong>
-                        <span style="font-size:0.7rem; color:var(--text-muted);">Area Konten Utama Berubah Dinamis</span>
-                      </div>
-                      
-                      <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.72rem; background:rgba(255,255,255,0.04); padding:8px 10px; border-radius:6px; border:1px solid var(--border-color); flex-wrap:wrap; gap:8px;">
-                        <span><strong style="color:var(--accent-blue);">[ Action Bar ]</strong> Tombol [+ Tambah Data Baru] | Tombol [Ekspor PDF/Excel]</span>
-                        <span><strong style="color:var(--accent-blue);">[ Search &amp; Filter ]</strong> Form Cari SKU/Nama | Filter Rentang Tanggal</span>
+                    <div class="blueprint-card"
+                      style="border-color:var(--border-color); background:rgba(255,255,255,0.02);">
+                      <div
+                        style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+                        <strong style="font-size:0.78rem; color:var(--text-main);"><i class="fa-solid fa-table-list"
+                            style="color:var(--accent-orange);"></i> Blueprint Struktur Tata Letak Modul Master Data /
+                          Transaksi (Saat Menu Di Luar Dashboard Dipilih)</strong>
+                        <span style="font-size:0.7rem; color:var(--text-muted);">Area Konten Utama Berubah
+                          Dinamis</span>
                       </div>
 
-                      <div style="border:1px dashed var(--border-color); padding:8px; border-radius:4px; font-size:0.72rem; color:var(--text-muted);">
-                        <div style="display:flex; justify-content:space-between; font-weight:700; border-bottom:1px solid var(--border-color); padding-bottom:6px; color:var(--text-main);">
-                          <span>No</span> | <span>Kode SKU</span> | <span>Nama Bahan Baku</span> | <span>Satuan</span> | <span>Batas Min</span> | <span>Batas Max</span> | <span>Stok Aktual</span> | <span>Status EWS</span> | <span>Kolom Aksi</span>
+                      <div
+                        style="display:flex; justify-content:space-between; align-items:center; font-size:0.72rem; background:rgba(255,255,255,0.04); padding:8px 10px; border-radius:6px; border:1px solid var(--border-color); flex-wrap:wrap; gap:8px;">
+                        <span><strong style="color:var(--accent-blue);">[ Action Bar ]</strong> Tombol [+ Tambah Data
+                          Baru] | Tombol [Ekspor PDF/Excel]</span>
+                        <span><strong style="color:var(--accent-blue);">[ Search &amp; Filter ]</strong> Form Cari
+                          SKU/Nama | Filter Rentang Tanggal</span>
+                      </div>
+
+                      <div
+                        style="border:1px dashed var(--border-color); padding:8px; border-radius:4px; font-size:0.72rem; color:var(--text-muted);">
+                        <div
+                          style="display:flex; justify-content:space-between; font-weight:700; border-bottom:1px solid var(--border-color); padding-bottom:6px; color:var(--text-main);">
+                          <span>No</span> | <span>Kode SKU</span> | <span>Nama Bahan Baku</span> | <span>Satuan</span> |
+                          <span>Batas Min</span> | <span>Batas Max</span> | <span>Stok Aktual</span> | <span>Status
+                            EWS</span> | <span>Kolom Aksi</span>
                         </div>
                         <div style="padding-top:6px; display:flex; justify-content:space-between; align-items:center;">
-                          <span>1</span> | <span>SKU-001</span> | <span>Ayam Potong Segar</span> | <span>Kg</span> | <span>15 Kg</span> | <span>100 Kg</span> | <span>8 Kg</span> | 
-                          <span style="background:rgba(239,68,68,0.15); color:#ef4444; padding:2px 6px; border-radius:4px; font-weight:700;">RE-ORDER <i class="fa-solid fa-triangle-exclamation"></i></span> | 
-                          <span>[ <i class="fa-solid fa-pen-to-square"></i> Edit | <i class="fa-solid fa-trash"></i> Hapus ]</span>
+                          <span>1</span> | <span>SKU-001</span> | <span>Ayam Potong Segar</span> | <span>Kg</span> |
+                          <span>15 Kg</span> | <span>100 Kg</span> | <span>8 Kg</span> |
+                          <span
+                            style="background:rgba(239,68,68,0.15); color:#ef4444; padding:2px 6px; border-radius:4px; font-weight:700;">RE-ORDER
+                            <i class="fa-solid fa-triangle-exclamation"></i></span> |
+                          <span>[ <i class="fa-solid fa-pen-to-square"></i> Edit | <i class="fa-solid fa-trash"></i>
+                            Hapus ]</span>
                         </div>
                       </div>
                     </div>
@@ -1565,27 +1490,36 @@
                 <tbody>
                   <tr>
                     <td><strong>Form Master Bahan Baku</strong></td>
-                    <td>• Kode SKU<br>• Nama Bahan Baku<br>• Satuan Bahan<br>• Batas Min (Safety Stock)<br>• Batas Max (Kapasitas)</td>
-                    <td>Varchar(20), PK<br>Varchar(100)<br>Enum ('Kg', 'Pcs', 'Ktg')<br>Integer (Positif)<br>Integer (Positif)</td>
-                    <td>• Kode SKU harus unik tidak boleh duplikat.<br>• <strong>Validasi Min-Max:</strong> Angka Batas Min tidak boleh lebih besar atau sama dengan Batas Max.</td>
+                    <td>• Kode SKU<br>• Nama Bahan Baku<br>• Satuan Bahan<br>• Batas Min (Safety Stock)<br>• Batas Max
+                      (Kapasitas)</td>
+                    <td>Varchar(20), PK<br>Varchar(100)<br>Enum ('Kg', 'Pcs', 'Ktg')<br>Integer (Positif)<br>Integer
+                      (Positif)</td>
+                    <td>• Kode SKU harus unik tidak boleh duplikat.<br>• <strong>Validasi Min-Max:</strong> Angka Batas
+                      Min tidak boleh lebih besar atau sama dengan Batas Max.</td>
                   </tr>
                   <tr>
                     <td><strong>Form Transaksi Masuk</strong></td>
-                    <td>• Nomor Faktur/Bukti<br>• Tanggal Masuk<br>• Pilihan SKU Bahan Baku<br>• Kuantitas Masuk<br>• Keterangan Supplier</td>
+                    <td>• Nomor Faktur/Bukti<br>• Tanggal Masuk<br>• Pilihan SKU Bahan Baku<br>• Kuantitas Masuk<br>•
+                      Keterangan Supplier</td>
                     <td>Varchar(30)<br>Date (YYYY-MM-DD)<br>Foreign Key (SKU)<br>Integer (Positif)<br>Text</td>
-                    <td>• Kuantitas masuk wajib > 0.<br>• Sistem otomatis memicu query atomik untuk menambah nilai <code>total_stock</code> pada tabel master bahan.</td>
+                    <td>• Kuantitas masuk wajib > 0.<br>• Sistem otomatis memicu query atomik untuk menambah nilai
+                      <code>total_stock</code> pada tabel master bahan.
+                    </td>
                   </tr>
                   <tr>
                     <td><strong>Form Transaksi Keluar</strong></td>
-                    <td>• Tanggal Pemakaian<br>• Pilihan SKU Bahan Baku<br>• Kuantitas Keluar<br>• Keterangan Penggunaan</td>
+                    <td>• Tanggal Pemakaian<br>• Pilihan SKU Bahan Baku<br>• Kuantitas Keluar<br>• Keterangan Penggunaan
+                    </td>
                     <td>Date (YYYY-MM-DD)<br>Foreign Key (SKU)<br>Integer (Positif)<br>Text (Konsumsi / Afkir)</td>
-                    <td>• <strong>Validasi Stok Cukup:</strong> Kuantitas keluar tidak boleh melebihi stok aktual gudang (mencegah stok negatif).<br>• Pemicu kalkulasi EWS otomatis.</td>
+                    <td>• <strong>Validasi Stok Cukup:</strong> Kuantitas keluar tidak boleh melebihi stok aktual gudang
+                      (mencegah stok negatif).<br>• Pemicu kalkulasi EWS otomatis.</td>
                   </tr>
                   <tr>
                     <td><strong>Modul Laporan &amp; EWS</strong></td>
                     <td>• Filter Rentang Periode<br>• Filter Status Bahan<br>• Pilihan Format Ekspor</td>
                     <td>Date Range<br>Enum ('Semua', 'Kritis')<br>PDF / Excel</td>
-                    <td>• Mengecek kondisi <code>total_stock &lt;= min_stock</code> secara langsung.<br>• Memberi tanda label merah <strong>RE-ORDER</strong> untuk bahan yang berada di bawah batas kritis.</td>
+                    <td>• Mengecek kondisi <code>total_stock &lt;= min_stock</code> secara langsung.<br>• Memberi tanda
+                      label merah <strong>RE-ORDER</strong> untuk bahan yang berada di bawah batas kritis.</td>
                   </tr>
                 </tbody>
               </table>
@@ -1596,15 +1530,15 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">12</span>
+            <span class="fsf-number">10</span>
             <div class="fsf-line"></div>
           </div>
           <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
         </div>
       </section>
 
-      <!-- SLIDE 13: LAPORAN & EARLY WARNING SYSTEM -->
-      <section class="slide" data-slide="13">
+      <!-- SLIDE 11: LAPORAN & EARLY WARNING SYSTEM -->
+      <section class="slide" data-slide="11">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
           <div class="fsh-left">
@@ -1621,7 +1555,7 @@
             <div class="slide-category">Bab IV • Pelaporan & Evaluasi</div>
             <h2 class="slide-title">Laporan Manajemen & Peringatan Dini (Early Warning System)</h2>
           </div>
-          <span class="slide-number-badge">Slide 13 / 15</span>
+          <span class="slide-number-badge">Slide 11 / 14</span>
         </div>
         <div class="slide-body grid-2">
           <div class="info-card highlight-red">
@@ -1655,15 +1589,15 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">13</span>
+            <span class="fsf-number">11</span>
             <div class="fsf-line"></div>
           </div>
           <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
         </div>
       </section>
 
-      <!-- SLIDE 14: PENGUJIAN SISTEM (BLACK BOX TESTING) -->
-      <section class="slide" data-slide="14">
+      <!-- SLIDE 12: PENGUJIAN SISTEM (BLACK BOX TESTING) -->
+      <section class="slide" data-slide="12">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
           <div class="fsh-left">
@@ -1680,7 +1614,7 @@
             <div class="slide-category">Bab IV • Hasil Uji Coba</div>
             <h2 class="slide-title">Pengujian Fungsionalitas Sistem (Black Box Testing)</h2>
           </div>
-          <span class="slide-number-badge">Slide 14 / 15</span>
+          <span class="slide-number-badge">Slide 12 / 14</span>
         </div>
         <div class="slide-body">
           <div class="info-card" style="padding: 16px;">
@@ -1738,15 +1672,15 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">14</span>
+            <span class="fsf-number">12</span>
             <div class="fsf-line"></div>
           </div>
           <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
         </div>
       </section>
 
-      <!-- SLIDE 15: KESIMPULAN & SARAN -->
-      <section class="slide" data-slide="15">
+      <!-- SLIDE 13: KESIMPULAN & SARAN -->
+      <section class="slide" data-slide="13">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-header">
           <div class="fsh-left">
@@ -1763,7 +1697,7 @@
             <div class="slide-category">Bab V • Penutup</div>
             <h2 class="slide-title">Kesimpulan & Saran Pengembangan</h2>
           </div>
-          <span class="slide-number-badge">Slide 15 / 15</span>
+          <span class="slide-number-badge">Slide 13 / 14</span>
         </div>
         <div class="slide-body grid-2">
           <div class="info-card highlight-emerald">
@@ -1795,16 +1729,16 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">15</span>
+            <span class="fsf-number">13</span>
             <div class="fsf-line"></div>
           </div>
           <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
         </div>
       </section>
 
-      <!-- SLIDE 16: UNGKAPAN TERIMA KASIH & SESI TANYA JAWAB -->
-      <!-- SLIDE 16: UNGKAPAN TERIMA KASIH & SESI TANYA JAWAB (MASTERPIECE CLOSING SLIDE) -->
-      <section class="slide cover-slide" data-slide="16"
+      <!-- SLIDE 14: UNGKAPAN TERIMA KASIH & SESI TANYA JAWAB -->
+      <!-- SLIDE 14: UNGKAPAN TERIMA KASIH & SESI TANYA JAWAB (MASTERPIECE CLOSING SLIDE) -->
+      <section class="slide cover-slide" data-slide="14"
         style="display:flex; flex-direction:column; justify-content:space-between;">
         <!-- KOP HEADER KHUSUS MODE LAYAR PENUH (SERUPA DENGAN SLIDE LAIN) -->
         <div class="fullscreen-slide-header">
@@ -1855,7 +1789,8 @@
           <!-- Thesis Title Banner Pill (JUDUL IKUTI YANG DIAWAL) -->
           <div
             style="display:inline-block; max-width:920px; background:rgba(255,255,255,0.06); border:1px solid var(--border-color); padding:12px 28px; border-radius:14px; font-size:1.02rem; font-weight:800; color:var(--text-main); margin-bottom:24px; line-height:1.5; text-transform:uppercase;">
-            PERANCANGAN SISTEM INFORMASI MANAJEMEN PERSEDIAAN UNTUK MENGOPTIMALKAN STOK BAHAN BAKU PADA LAZATTO STASIUN WALANTAKA
+            PERANCANGAN SISTEM INFORMASI MANAJEMEN PERSEDIAAN UNTUK MENGOPTIMALKAN STOK BAHAN BAKU PADA LAZATTO STASIUN
+            WALANTAKA
           </div>
 
           <!-- UNGKAPAN TERIMA KASIH KHUSUS (DEDIKASI SIDANG SKRIPSI DIPERBESAR) -->
@@ -1915,7 +1850,7 @@
         <!-- FOOTER IDENTITAS KHUSUS MODE LAYAR PENUH -->
         <div class="fullscreen-slide-footer">
           <div class="fsf-top-row">
-            <span class="fsf-number">16</span>
+            <span class="fsf-number">14</span>
             <div class="fsf-line"></div>
           </div>
           <div class="fsf-name">AHMAD HAPENDI 1101221160</div>
@@ -1933,7 +1868,7 @@
   <!-- Footer Controls / Navigation Bar -->
   <footer class="presentation-footer">
     <div class="footer-info">
-      <div style="font-weight: 700; font-size: 0.95rem;" id="footerSlideText">Slide 1 dari 16</div>
+      <div style="font-weight: 700; font-size: 0.95rem;" id="footerSlideText">Slide 1 dari 14</div>
       <div class="slide-progress-bar">
         <div class="slide-progress-fill" id="slideProgressFill"></div>
       </div>
@@ -1948,10 +1883,10 @@
     </div>
   </footer>
 
-  <!-- Overview 15 Slide Modal -->
+  <!-- Overview 14 Slide Modal -->
   <div class="overview-modal" id="overviewModal">
     <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1320px; margin: 0 auto;">
-      <h3 style="font-size: 1.5rem; font-weight: 800;">Daftar 15 Slide Sidang Skripsi</h3>
+      <h3 style="font-size: 1.5rem; font-weight: 800;">Daftar 14 Slide Sidang Skripsi</h3>
       <button class="btn-icon" id="btnCloseOverview"><i class="fa-solid fa-xmark"></i> Tutup</button>
     </div>
     <div class="overview-grid" id="overviewGrid">
